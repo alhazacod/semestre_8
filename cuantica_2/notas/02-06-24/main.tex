@@ -1,0 +1,177 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 1 }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Momento Angular }
+\begin{gather*}
+  \vec L = \vec r \cross \vec p \\
+  L_k  = \epsilon _{ijk } \hat r _i \hat p _j = + i \hbar \epsilon _{ijk }  \hat r _i \partial _j = - i \hbar \epsilon _{ijk } x_i \frac{\partial  }{\partial x ^ {j }}\\
+  [L] = \hbar = d \cross m \cross v = m \frac{d ^2}{t ^2} t = F d t = E t 
+\end{gather*}
+ 
+\subsection{Algebra de Lee }
+\begin{gather*}
+  \{L_x,L_y,L_z\} 
+\end{gather*}
+\begin{gather*}
+  [, ] : V \otimes V \qquad \rightarrow \qquad V \\
+  (L_i , L_j ) \qquad \rightarrow \qquad  [L_i, L_j ] = i \hbar \epsilon _{ijk } L_k 
+\end{gather*}
+
+\textbf{Propiedades }
+\begin{itemize}
+  \item $ [\hat x_i, \hat p_j ] = i \hbar \delta _{ij } \quad \rightarrow \quad \Delta x \Delta p_x  \geq \frac{\hbar }{2} $
+  \item $ [AB,C ] = A[B,C] + [A,C]B  $
+  \item $ [A,BC] = B[A,C ] +  [A,B]C  $
+\end{itemize}
+
+\begin{gather*}
+  [L_i, L_j ] = [i \hbar \epsilon _{ipq } x_p p_q, i \hbar \epsilon _{imn } x_m p _n ] \\
+  = - \hbar ^2 \epsilon _{ipq } \epsilon _{jmn } [\hat x _p \hat p _q , \hat x _m \hat p _n ]
+\end{gather*}
+Usando las propiedade spodemos escribir lo que está entre parentesis como: 
+\begin{gather*}
+x\{x_p [p_q, x_m ] p_n + x_px_m \underset{=0}{[p_q,p_n ]} + \underset{ = 0 }{[x_p, x_n ]} p_n p_q + x_m\underset{= i \hbar \delta _{pn }}{[x_p,p_n]}p_q\}
+\end{gather*}
+Entonces 
+\begin{gather*}
+  [L_i,L_j] = \epsilon _{ipq }  \epsilon _{jmn } \{ - i \hbar  x_p p_n \delta _{qm }  + i \hbar x_m p_q \delta _{pn }  \} \\
+  = i \hbar \epsilon _{inq }  \epsilon _{jmn } x _{m }  p _{q } - i \hbar  \epsilon _{ipm }  \epsilon _{jmn } x _{p } p _{n } \\
+  \text{Reescribiendo los indices mudos }\\
+  = i \hbar  \hat x_p \hat p _n \underset{ = \delta _{ij } \delta _{pn } - \delta _{in } \delta _{pj } - \delta _{ji }  \delta _{pn }  + \delta _{jn } \delta _{pi }  }{\{\epsilon _{ipm }  \epsilon _{jnm } - \epsilon _{jpm } \epsilon _{inm}  \}} \\
+  = i \hbar \{- \hat x _j p_i + x_ip_j \} \\
+  = i \hbar (x_i p_j - x_j p_i ) \\
+  = i \hbar \epsilon _{ijk } L_k
+\end{gather*}
+
+\begin{itemize}
+  \item $ [L_x,L_y] = i \hbar L_z $
+  \item $ [L_x,L_z] = i \hbar L_y $
+  \item $ [L_y,L_z] = i \hbar L_x $
+\end{itemize}
+
+\hfill 
+
+\hfill 
+
+\begin{gather*}
+  [L^2, L_j ] = [L_iL_i, L_j ] = L_i[L_i,L_j] + [L_i,L_j]L_i\\
+  = i \hbar \epsilon _{ijk } \hat L_i \hat L_k + i \hbar \epsilon _{ijk } L_k L_i\\
+  = i \hbar \epsilon _{ijk } \{L_i L_k + L_k L_i \} = 0 
+\end{gather*}
+
+Podemos decir que $ L^2  $ conmuta con todas las bases del espacio vectorial.
+
+\hfill
+
+Recordemos que $ \{L_x,L_y,L_z \} $ son operadores hermiticos
+
+\hfill
+
+Vamos a definir el operador $ L _{\pm } = L_x \pm i L_y  $ (este NO es hermitico)
+\begin{gather*}
+  \frac{1}{2} (L_+ L_- + L_- L_+ ) = L_x ^2 + L_y ^2 
+\end{gather*}
+Entonces podemos escribir $ L^2  $ como: 
+\begin{gather*}
+  L^2 = L_x^2 + L_y^2 + L_z^2 = \frac{1}{2} (L_+L_- + L_-L_+) 
+\end{gather*}
+
+\begin{itemize}
+  \item $ [L_+, L_- ] = 2 \hbar L_z  $
+  \item $ [L_z, L_+ ] = \hbar L_+  $ 
+  \item $ [L_z, L_- ] = - \hbar L_- $
+\end{itemize}
+
+Tenemos que $ L^2  $ conmuta con todos, entonces: 
+\begin{gather*}
+  [L^2, L_\pm ] = 0 
+\end{gather*}
+
+Tenemos que $ \{L^2, L_z \} $ conmutan entre sí 
+
+\begin{gather*}
+  \{H, L^2 , L_z \} \qquad \qquad \text{donde }H = \frac{p^2 }{2m } + \frac{1}{r}
+\end{gather*}
+
+El hamiltoniano es central, no depende de $ \theta  $ ni de $ \phi  $y como $ L^2  $ y $ L_z  $ son derivadas de estas variables entonces:
+\begin{gather*}
+  [H, L^2 ] = [H,L_z ] = 0  
+\end{gather*}
+
+$ {L^2,L_z } $ \textbf{son constantes de movimiento.}
+
+\hfill
+
+Como $ \{H,L^2,L_z \} $ conmutan entre sí entonces tenemos una autofuncion $ \Phi _{nlm }  $, como $ L^2,L_z  $ son constantes de movimiento entonces $ l,m  $ no van a cambiar, a estos se les conoce como numeros cuanticos.
+
+Vamos a hacer $ \{L^2, L_z \} \rightarrow \ket{\alpha, \beta} $
+\begin{itemize}
+  \item $ L^2 \ket{\alpha, \beta} = \hbar ^2 \alpha \ket{\alpha, \beta} $ 
+  \item $ L_z \ket{\alpha, \beta} = \hbar \beta \ket{\alpha, \beta} $
+\end{itemize}
+
+Recordemos que $ [L^2, L _{@pm } ] =0 $ 
+
+\begin{gather*}
+  L^2 (L_\pm  \ket{\alpha,\beta}) = L_\pm  (L^2 \ket{\alpha,\beta}) = L_\pm (\hbar \alpha \ket{\alpha,\beta}) = \hbar \alpha (L_\pm \ket{\alpha,\beta}) 
+\end{gather*}
+
+\hfill 
+
+\begin{gather*}
+  L_z (L_\pm \ket{\alpha,\beta}) = (L_\pm L_z \pm \hbar L_\pm ) \ket{\alpha,\beta} \\
+  = (L_\pm \hbar \beta \pm \hbar L_\pm  ) \ket{\alpha, \beta}\\
+  = \hbar (\beta \pm 1 )(L_\pm \ket{\alpha, \beta})
+\end{gather*}
+
+Y tenemos que $ L_+ \ket{\alpha, \beta} \rightarrow \hbar (\beta + 1 ) $ y $ L_- \ket{\alpha,\beta} \rightarrow \hbar (\beta-1 ) $
+
+Vamos a realizar la siguiente aproximacion: 
+\begin{gather*}
+  L_\pm \ket{\alpha,\beta} \approx C _{i,p } \ket{\alpha,\beta\pm 1} 
+\end{gather*}
+
+Podemos hacer lo siguiente: 
+\begin{gather*}
+  \bra{\alpha,\beta} L_\mp L_\pm \ket{\alpha,\beta} = (L_\pm \ket{\alpha,\beta})^+ (L_\pm \ket{\alpha,\beta}) = \left|L_\pm \ket{\alpha,\beta}\right|^2 
+\end{gather*}
+
+
+\begin{gather*}
+  \bra{\alpha,\beta} L _{\pm }  L _{\pm } \ket{\alpha, \beta} =  
+\end{gather*}
+
+\end{document}
