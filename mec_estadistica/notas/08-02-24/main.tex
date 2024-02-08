@@ -1,0 +1,136 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 2 }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Mecanica Clasica}
+Energia de gas ideal: 
+\begin{gather*}
+  U = \frac{1}{2}m_1v_1 ^2 + ... = \displaystyle\sum_{j=1 }^{N } \frac{1 }{2} m_j ^2 v_j ^2 
+\end{gather*}
+La energia interna del sistema se puede escirbir como $ U = N \bar \epsilon $, con la energia promedio por partícula $ \bar \epsilon  $ dada por 
+\begin{gather*}
+  \bar \epsilon = \frac{U }{N } = \frac{1}{2}m \vec v^2 
+\end{gather*}
+Definimos un parámetro fundamental denominado temperatura cinética del gas ideal $ T  $ de tal forma que la energia cinética promedio por partícula es proporcional a este parámetro, es decir 
+\begin{gather*}
+  \bar \epsilon = \frac{3 }{2} \kappa_B T  
+\end{gather*}
+Podemos escribir la energía interna en términos de la temperatura cinética, es decir 
+\begin{gather*}
+  U = N \bar \epsilon = \frac{3}{2} N \kappa_B T 
+\end{gather*}
+
+\hfill 
+
+\hfill
+
+La persion ejercida por un gas ideal en las paredes se origina en los impulsos ejercidos por las partículas que chocan contra las paredes. La presion sobre la pared es 
+\begin{gather*}
+  P = \frac{2}{3 } n @bar \epsilon  =  n \kappa_B T 
+\end{gather*}
+Teniendo en cuenta que la densidad columétrica de partículas $ n  $ estça definida como 
+\begin{gather*}
+  n = \frac{N }{V }  
+\end{gather*}
+\textbf{Ecuación de estado de los gases ideales }
+\begin{gather*}
+  PV = \kappa_B NT 
+\end{gather*}
+
+\textbf{Formulación analitica f grados de libertad } En la formulaicón lagrngiana, un sistema fisico conservativo con $ f  $ grados de libertad está descrito por 
+\begin{gather*}
+  L ^ {(f)} (\vec q, \dot {\vec q} ) = T(\dot {\vec q}) - V (\vec q) = \displaystyle\sum_{k = 1 }^{ f } \frac{1}{2}m \dot q_k - V(\vec q ) 
+\end{gather*}
+Con eq. de euler-lagrande 
+\begin{gather*}
+  \frac{d  }{d t } \frac{\partial L ^ {(f) } }{\partial \dot q_k } - \frac{\partial L ^ {(f) } }{\partial q_k } = 0  
+\end{gather*}
+Correspondientes a la segunda ley de newton $ m \ddot q_k = m \frac{d \dot q _k  }{d t } = - \frac{\partial V(\vec q ) }{\partial q_k }$. con los momento canónicamente conjugados 
+\begin{gather*}
+  p_k = \frac{\partial L ^ {(f) } }{\partial \dot q_k} 
+\end{gather*}
+
+En la formulación \textbf{Hamiltoniana } el sistema fisico conservativo con $ f  $ grados de liberta está descrito por 
+\begin{gather*}
+  H ^ {(f) }(\vec p , \vec q, \dot{\vec q }) = \displaystyle\sum_{k = 1 }^{f }p_k \dot q_k - L ^{(f) } (\vec q, \dot{\vec q })
+\end{gather*}
+Dado que $ p_k = \frac{\partial L ^ {(f) } }{\partial \dot q _k } $
+\begin{gather*}
+  H ^ {(f) }(\vec p , \vec q ) = T(\vec p ) + V(\vec q) = \displaystyle\sum_{k=1 }^{f } \frac{p_k ^2 }{2m } + V(\vec q ) 
+\end{gather*}
+Con ecuaciones de movimiento 
+\begin{gather*}
+  \dot q_k = \frac{\partial H ^ {(f) } }{\partial p_k }\qquad \qquad \qquad \dot p _k = - \frac{\partial H ^ {(f) } }{\partial q_k } 
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\textbf{Teorema de Liouville } El agregado de puntos representativos que describe los puntos representativos en el espacio de fase se mueve como un fluido incompresible en el espacio de fase. 
+
+\hfill 
+
+\hfill 
+
+Si la funcion densidad e probabilidad de estados en cualquier instante $ t  $ $ \rho(\vec p , \vec q ; t ) $ es una función conocida en el espacio de fase, que satisface 
+\begin{gather*}
+  \int_{}^{} \rho(\vec p, \vec q ) d\vec p d \vec q = 1  
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+Ecuación de \textbf{Liouville }
+\begin{gather*}
+  \frac{\partial \rho(\vec p, \vec q ; t ) }{\partial t } = L \rho(\vec p , \vec q ; t ) = \{H ^ {N }, \rho\}
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\textbf{Mecánica estadistica en equilibrio: }Corresponde al caso $ \rho = \rho(\vec p, \vec q ) $
+\begin{gather*}
+  \frac{\partial \rho }{\partial t } = \{H ^ {(N) }, \rho\} = 0
+\end{gather*}
+
+\textbf{Mecánica estadística fuera de equilibrio } corresponde al caso $ \rho = \rho(\vec p, \vec q ; t ) $
+\begin{gather*}
+  \frac{\partial \rho }{\partial r } = \{H ^ {(N) }, \rho\} \neq 0 
+\end{gather*}
+
+\end{document}
