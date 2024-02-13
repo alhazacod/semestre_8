@@ -1,0 +1,113 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 3 }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{}
+\begin{gather*}
+  H ^ {(f) } (\vec p, \vec q ) = \displaystyle\sum_{k = 1 }^{f }\frac{p_k^2 }{2m }+ V(\vec q ) 
+\end{gather*}
+Su variacion: 
+\begin{gather*}
+  dH ^ {(f) } = \displaystyle\sum_{k = 1 }^{ f } \left(\dot q_k dp_k - \dot p_k dq_k \right) 
+\end{gather*}
+
+
+\hfill 
+
+\hfill 
+
+\hfill 
+
+\begin{gather*}
+  p \dot q_1 \Delta q_2 \cdots \Delta q _{3N } \Delta p_1 \Delta p_2 \cdots \Delta p _{3N } = p \dot q_1 \Delta \omega ^ {q_1 }
+\end{gather*}
+Un flujo como el anterior pero con respecto a la hipersuperficie perpendicular a la coordenada $ q_1 + \Delta q_1  $ es
+
+\begin{gather*}
+  (p \dot q _q) _{q_1 + \Delta q_1 } \Delta \omega ^ {q_1 } = \left(p \dot q_1 + \frac{\partial (p \dot q_1 ) }{\partial q_1 } \Delta q_1 \right)\Delta\omega ^ {q_1 }
+\end{gather*}
+el numeros de puntos representativos en el pequeño volumen disminuye por unidad de tiempo en la cantidad 
+\begin{gather*}
+  - \frac{\partial (p \dot q_1 ) }{\partial q_1 }\Delta q_1 \Delta \omega ^ {q_1 } = - \frac{\partial (p\dot q_1 ) }{\partial q_1 } \Delta \Lambda 
+\end{gather*}
+$ \Lambda $ es el volumen. 
+
+Cuando se tiene en cuenta las usperficies perpendiculaes a las otras coordenadas (coordenadas generalizadas y momento canonicos conjugados),de tal manera que la tasa de cmabio en el tiempo de la densidad $ \rho $ es 
+\begin{gather*}
+  \frac{\partial \rho }{\partial t } = - \displaystyle\sum_{k = 1 }^{3N }\left(\frac{\partial (p\dot q_k ) }{\partial q_k } + \frac{\partial (p \dot p_k ) }{\partial p_k }\right) 
+\end{gather*}
+Haciendo uso de las ecuaciones de hamilton obtenemos
+\begin{gather*}
+  \frac{d \rho }{d t } = \frac{\partial \rho }{\partial t } + \displaystyle\sum_{k = 1 }^{3N } \left(\dot q_k \frac{\partial \rho }{\partial q_k } + \dot p_k \frac{\partial \rho }{\partial p_k }\right) = 0  
+\end{gather*}
+\textbf{A partir de la ecuacion de un fluido incompresible }
+\begin{gather*}
+  \rho(\vec p, \vec q; t ) d\vec p d \vec q  
+\end{gather*}
+Por lo tanto un elemento infitesimal de volumen $ d \Lambda $ se escribe como 
+\begin{gather*}
+  d \Lambda  = d \vec p d \vec q = d p_1 dp_2 \cdots dp _{3N } dq_1 dq_2 \cdots d q _{3N } 
+\end{gather*}
+$ \rho(\vec p, \vec q;t ) $ representa la función densidad de probabilidad de estados. En un tiempo dado, el primedio en el ahora ensable estadístico de una cantidad dinámica $ A(\vec p, \vec q ) $ se define como 
+\begin{gather*}
+  <A> (t) = \bar A (t) = \frac{\int_{}^{} A(\vec p, \vec q )\rho(\vec p, \vec q;t ) d\vec p d \vec q }{\int \rho(\vec p, \vec q;t )d\vec p d \vec q} 
+\end{gather*}
+Con condicion de normalizacion 
+\begin{gather*}
+  \int\rho(\vec p, \vec q) d\vec p d \vec q = 1  
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\hfill 
+
+\hfill
+
+\hfill
+
+\textbf{Teorema de Liouville: }
+\begin{gather*}
+  \frac{\partial \rho(\vec p, \vec q;t ) }{\partial t} = \{H ^ {(3N )},\rho\} = \textbf{L} \rho
+\end{gather*}
+Donde $ \textbf{L } $es el operador de Lioville
+
+Nos vamos a centrar en la mecanica en equilibrio, es decir cuando $ \rho = \rho(\vec p , \vec q ) $. La ecuación de continuidad posee una primera integral que es denominada $ \alpha(\vec p, \vec q ) $
+\begin{gather*}
+  \displaystyle\sum_{k = 1 }^{3N } \left(\frac{\partial \alpha }{\partial q_k }\dot q_k + \frac{\partial \alpha }{\partial p_k }\dot p_k \right) = 0  
+\end{gather*}
+
+\end{document}
