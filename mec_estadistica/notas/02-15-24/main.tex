@@ -1,0 +1,182 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 3 }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Fundamentos desde la perspectiva cuántica}
+\textbf{Mecánica cuántica para una partícula sin grado de libertad interno }. Sobre la particula pede estár actuando una fuerza $ \vec F  $, que se considera conservativa, por lo que está descrita en términos de una energía potencial o potencial $ V  $. 
+
+
+\hfill 
+
+\hfill 
+
+El sistema está descrito por el operador hamiltoniano de una particula $ \hat H ^ {(1) } $, que se construye con $ \vec r  $ y $ \vec p  $. Operadores posicion $ \hat r = \hat{\vec r } $ y momento $ \hat p = \hat{\vec p } $. y satisfacen las ecuaciones de valore spropios 
+\begin{gather*}
+  \hat r \ket{\vec r } = \vec r \ket{\vec t }\\
+  \hat p \ket{\vec p } = \vec p \ket{\vec p }
+\end{gather*}
+donde $ \ket{\vec r }  $ y $ \ket{\vec p } $ representan los estod propios.
+
+Completez 
+\begin{gather*}
+  \int_{}^{} d\vec r \ket{\vec r } \bra{\vec r } = \int_{}^{}d^3 r \ket{\vec r }\bra{\vec r } = \hat 1
+  \int_{}^{} d\vec p \ket{\vec p } \bra{\vec p } = \int_{}^{}d^3 p \ket{\vec p }\bra{\vec p } = \hat 1  
+\end{gather*}
+Ortogonalidad
+\begin{gather*}
+  ... 
+\end{gather*}
+
+
+El hamiltoniano de una particula 
+\begin{gather*}
+  \hat H ^ {(1) } = \hat T (\hat p ) + \hat V (\hat r )
+\end{gather*}
+Con 
+\begin{gather*}
+  \hat T (\hat p ) = \frac{\hat p }{2m } 
+\end{gather*}
+Ecuacion de valores propios hamiltoniano 
+\begin{gather*}
+  \hat H ^ {(1) } \ket{\psi _i } = \epsilon_i \ket{\psi_i } 
+\end{gather*}
+Donde $ \ket{\psi_i } $ representa los estados cuanticos del sistema de una partícula, los cuales son rotulados mediante el número cuántico $ i  $, mientras que $ \epsilon_i  $ representa el nuvel de energia del sistema de una partícula cuando se encuentra en el estado cuántico rotulado por $ i  $.
+
+La ecuacion de valores propios se puede solucionar analíticamente y de forma exacta, por lo que se pueden conocer los estados propios $ \{\ket{\psi_i }\} $ y los respectivos niveles de energia $ \{\epsilon_i \} $. $ \{\ket{\psi_i }\} $ forman una base completa ortonormal la cual es la base del espacio de hilbert asociado. 
+
+En representación de coordenadas, los estados $ \ket{\psi _i }  $ están descritor por funciones de onda de probabilidad $ \psi_i (\vec r ) $, 
+\begin{gather*}
+  \psi_i (\vec r ) = \bra{\vec r }\ket{\psi_i }  
+\end{gather*}
+La representación en coordenadas de la ecuacion de valores propios 
+\begin{gather*}
+  \left[- \frac{\hbar ^2}{2m }\grad^2 _{\vec r } + V (\vec r )\right]\psi_i (\vec r ) = \epsilon_i \psi_i (\vec r ) 
+\end{gather*}
+los estados propios son ortogonales 
+\begin{gather*}
+  \bra{\psi _{i' } }\ket{\psi_i } = \delta _{i'\ i }   
+\end{gather*}
+Y su completez 
+\begin{gather*}
+  \displaystyle\sum_{i }^{} \ket{\psi_i }\bra{\psi_i } = \hat 1  
+\end{gather*}
+$ \left|\psi_i (\vec t )\right|^2 d\vec r  $ representa la probabilidad de que la partícula sea encontrada en el intervalo $ (\vec r, \vec r + d \vec r ) $.
+
+Para el caso cuando el sistema se encuentra en el estado rotulado por $ m  $ se escribe como 
+\begin{gather*}
+  <\epsilon>_m = \bra{\psi_m } \hat H ^ {(1) }\ket{\psi_m } = \bra{\psi_m } \epsilon_m \ket{\psi_m } = \epsilon \bra{\psi_m }\ket{\psi_m } = \epsilon_m     
+\end{gather*}
+De igual forma 
+\begin{gather*}
+  <\vec r >_m  = \bra{\psi_m }\hat r \ket{\psi_m } = \int_{}^{} \psi_m^* (\vec r ) \vec r \psi_m (\vec r ) d\vec r\\   
+  <\vec p >_m  = \bra{\psi_m }\hat p \ket{\psi_m } = \int_{}^{} \psi_m^* (\vec p ) \vec p \psi_m (\vec p ) d\vec p   
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\hfill 
+
+\textbf{Particula libre en pozo infinito d epotencial lineal }  
+Entre 0 y $ a  $ el potencial es $ V(x) = 0  $ con hamiltoniano
+\begin{gather*}
+  \hat H ^ {(1) } = \frac{\hat p ^2 _x }{2m } 
+\end{gather*}
+En los puntos 0 y $ a  $ existen barreras infinitas de potencial. La ecuacion de valores propios es 
+\begin{gather*}
+  - \frac{\hbar ^2 }{2m } \frac{d ^2 \psi_i(x)  }{d dx^2 } = \epsilon_i \psi_i(x) 
+\end{gather*}
+Esta se puede solucionar analiticamente. El espectro de nergía queda determinado por 
+\begin{gather*}
+  \epsilon_i = \frac{\hbar ^2 k_i^2 }{2m } = \frac{\pi^2 \hbar ^2 }{2ma^2 }, \qquad \qquad \text{Con } i = 1,2,3,... 
+\end{gather*}
+Y los estados cuánticosnormalizados están representador por las funciones de onda de probabilidad 
+\begin{gather*}
+  \psi_i (x) = \sqrt{\frac{2 }{ a }} \sin{\left(\frac{i \pi }{a } x \right)} 
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\textbf{Pozo infinito d epotencial cuadrado }
+La particula está retringida a moverse sobre el cuadrado entre $ (0,a)  $ en $ xy  $. La ecuacion de valores propios 
+\begin{gather*}
+  \left[- \frac{\hbar ^2 }{2m } \frac{d ^2  }{d x^2 } - \frac{\hbar ^2 }{2m } \frac{d ^2  }{d y^2 }\right] \psi _{i_x,i_y } = \epsilon _{i_x,i_y }(x,y)   
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\textbf{Dentro de un cubo }
+\begin{gather*}
+  \hat H ^ {(1) } = \hat H_x ^ {(1)} +\hat H_y ^ {(1)}+\hat H_z ^ {(1)} = \frac{\hat p_x^2 }{2m } + \frac{\hat p_y^2 }{2m } + \frac{\hat p_z^2 }{2m }
+\end{gather*}
+Con niveles de energia 
+\begin{gather*}
+  \epsilon _{i_x,i_y,i_z }  = \epsilon _{i_x } + \epsilon _{i_y }  + \epsilon _{i_z }  = \frac{\pi^2 \hbar ^2 }{2ma^2 }[i_x^2+i_y^2+i_z^2]
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\textbf{Oscilador armonico unidimensional } 
+Hamiltoniano 
+\begin{gather*}
+  \hat H ^ {(1) } = \frac{\hat p_x^2 }{2m } + \frac{1}{2} k \hat x^2  .
+\end{gather*}
+Donde $ k  $ es la constante de leasticidad. Se define la frecuencia natural $ \omega^2 = \frac{k}{m } $. 
+\begin{gather*}
+  \left[- \frac{\hbar ^2}{2m } \frac{d ^2  }{d x^2 } + \frac{1}{2}m \omega^2 x^2 \right]\psi_i (x) = \epsilon_i \psi_i (x)  
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\textbf{Oscilador armónico isotrópico bidimensional }
+Tenemos $ V(x,y) = \frac{1}{2} k x^2 + \frac{1}{2}k y^2  $ y $ \omega_x^2 = \omega_y^2 = \omega^2 = \frac{k}{m} $. Con Hamiltoniano 
+\begin{gather*}
+  \hat H ^ {(1) } = \frac{\hat p_x ^2 }{2m} + \frac{1}{2}k\hat x^2 +\frac{\hat p_y ^2 }{2m} + \frac{1}{2}k\hat y^2 
+\end{gather*}
+ec. de valores propios 
+\begin{gather*}
+  \left[- \frac{\hbar ^2}{2m } \frac{d ^2  }{d x^2 } + ...\right]... \text{(ven en las notas del profesor xd)} 
+\end{gather*}
+
+\end{document}
