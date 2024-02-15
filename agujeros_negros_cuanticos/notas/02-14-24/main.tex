@@ -1,0 +1,94 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 2 }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Dinamica de Campos Termicos}
+Vamos a trabajar con el formalismo de \textbf{Umezawa-Takahashi} (U-T).
+
+\hfill 
+
+Algunos postulados 
+\begin{itemize}
+  \item Dada una magnitud $ A  $ debemos reescribirla como un operador $ \hat A  $ y asociarle un valor esperado $ <\hat A> $.
+  \item En cuantica se preparan estados $ \ket{\psi } $ del sistema.
+  \item Si el sistema es plankiano (tiene una temperatura asociada) $ <\hat A > = \displaystyle\sum_{n }^{} \bra{n }\hat A \ket{n } \frac{e ^ {-\beta E_n }}{\sum_{}^{}e ^ {-\beta E_n }}  $.
+  
+\end{itemize}
+
+\section{Formalismo de U-T }
+\begin{gather*}
+  \underset{\text{El vacio }}{\bra{0(\beta)}\hat A \ket{0(\beta)} } \overset{?}{=}<\hat A > = \frac{\sum_{n }^{} \bra{n }\hat A \ket{n } e ^ {-\beta E_n }   }{Z (\beta )} 
+\end{gather*}
+Donde: 
+\begin{itemize}
+  \item $ \hat H \ket{n } = E_n \ket{n } $.
+  \item $ \bra{n }\ket{m } = \delta _{nm }   $
+  \item $ \bra{n }\ket{m } = \delta _{nm }   $
+  \item Base $ \{\ket{n }\} $.
+\end{itemize}
+
+Vamos a probar si la ecuacion es consistente con los postulados de la cuantica.
+
+Como $ \ket{0(\beta)} $ es un estado cuantico este debe pertenecer al un espacio de Hilbert con base $ \{\ket{n }\} $. 
+\begin{align*}
+  \ket{0(\beta)} &= \hat 1 \ket{0(\beta)} \qquad \qquad &\text{Donde }\hat 1 = \displaystyle\sum_{n }^{} \ket{n }\bra{n }\\
+  &= \displaystyle\sum_{n }^{} \ket{n }\bra{n }\ket{0(\beta)}&\\
+  &= \displaystyle\sum_{n }^{} f_n (\beta) \ket{n }& \\
+  & \text{Y su espacio dual: }\\
+  \bra{0(\beta)} &= \displaystyle\sum_{n }^{} \bra{n }f_n^*(\beta) &
+\end{align*}
+Ya podemos trabajar con la expresion original
+\begin{align*}
+  \bra{0(\beta)}\hat A \ket{0(\beta)} &= \displaystyle\sum_{n }^{} f_n^*(\beta) \bra{n }\hat A \displaystyle\sum_{m }^{}f_m (\beta) \ket{m } \\
+  &= \displaystyle\sum_{n,m }^{} f_n^*(\beta) f_m (\beta) \bra{n }\hat A \ket{m } 
+\end{align*}
+Desde el lado derecho de la expresion original tenemos que: 
+\begin{align*}
+   \frac{\sum_{n }^{} \bra{n }\hat A \ket{n } e ^ {-\beta E_n }   }{Z (\beta )} =Z(\beta) ^ {-1} \sum_{n,m  }^{} \delta _{nm } \bra{n }\hat A \ket{m } e ^ {-\frac{1}{2}\beta (E_n+E_m) }
+\end{align*}
+Por lo que igualando ambas expresiones 
+\begin{align*}
+  \displaystyle\sum_{n,m }^{} f_n^*(\beta) f_m (\beta) \bra{n }\hat A \ket{m } &=  Z(\beta) ^ {-1} \sum_{n,m  }^{} \delta _{nm } \bra{n }\hat A \ket{m } e ^ {-\frac{1}{2}\beta (E_n+E_m) }\\
+  f_n^*(\beta ) f_m(\beta) &= Z ^ {-1 } \delta _{nm } e ^ {- \frac{1}{2} \beta (E_n +E_m )}
+\end{align*}
+Tomemos en cuenta que si $ n \neq m  $ $ \quad f_n^* (\beta) f_m (\beta) = 0  $\\
+Y para $ n = m  $ $ \qquad\qquad\qquad\qquad\quad \text{ }  f_n^* (\beta) f_m (\beta) = Z ^ {-1 }(\beta) e ^ {-\beta E_n }$\\
+Por lo que podemos reescribir la parte derecha como: 
+\begin{gather*}
+  f_n^*(\beta) f_m(\beta)= Z ^ {-1 }(\beta)\ \ \delta _{nm} e ^ {-\beta E_n } 
+\end{gather*}
+Observemos que la existencia de la delta en la parte derecha significa hay una regla de ortogonalidad pero las funciones a la izquierda son funciones escalares por lo que como primera conclusion podemos decir la expresion original está mal escrita. ¿Podemos construir vectores con estas funciones? Lo que sucede es que estas funciones ya fueron interpretadas como proyecciones.
+
+\end{document}

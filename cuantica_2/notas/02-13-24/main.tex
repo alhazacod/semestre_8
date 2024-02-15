@@ -1,0 +1,44 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 2 }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Momento angular y spin }
+\begin{gather*}
+  [J _{1i } , J _{1,j } ] = i \hbar  \epsilon _{ijk } J _{1k } \\
+  J _{1 } ^2 \ket{J_1, m_1 } = \hbar ^2 J_1(J_1 + 1) \ket{J_1,m_1 }\\
+  J _{1z } \ket{J_1 , m_1 } = \hbar m_1 \ket{J_1, m_1 }
+\end{gather*}
+
+\end{document}

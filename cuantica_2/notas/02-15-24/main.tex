@@ -1,0 +1,93 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 3 }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{}
+\begin{align*}
+  \ket{J_1 m_1 } \quad \rightarrow \quad [J _{1i } , J _{1j } ] = i \hbar \epsilon _{ijk } J _{ik } \quad &\rightarrow \quad J_1^2 \ket{J_1 m_1 } = \hbar ^2 J_1 (J_1+1 ) \ket{J_1 m_1 }    \\
+  &\rightarrow \quad J _{1z } \ket{J_1 m_1 }= \hbar m_1 \ket{J_1 m_1 }
+\end{align*}
+
+\hfill 
+
+\hfill 
+
+\begin{gather*}
+  \ket{J_1 m_1 } \otimes \ket{J_2 m_2 } = \ket{J_1 J_2 m_1 m_2 } = \ket{m_1 m_2 } 
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\begin{gather*}
+  [\vec J_1, \vec J_2 ] = 0 \\
+  [J_1^2 , J_2^2 ] = 0 \\
+  [J _{1z } , J _{2 } ^2 ] = 0 
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\begin{gather*}
+  J^2 \ket{jm } = \hbar ^2 j(j+1) \ket{jm }\\
+  J_z \ket{jm } = \hbar m \ket{jm }
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+$ \{J^2, J_z, J_1^2, J_2^2 \} $ contuman entre sí.
+
+\hfill 
+
+\hfill 
+
+\begin{gather*}
+  \ket{jm } = \displaystyle\sum_{m_1 = -1/2 }^{1/2 } \displaystyle\sum_{m_2 = -1/2 }^{1/2 }  \ket{m_1m_2 } \bra{m_2 m_1 }\ket{J_m }\\
+  \ket{m_1m_2 } = \displaystyle\sum_{j = J _{min } }^{J _{max } } \displaystyle\sum_{m_j = -j }^{j } \ket{jm }\bra{jm }\ket{m_1m_2 } 
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\begin{gather*}
+  \delta _{jj' } \delta _{m m' } = \displaystyle\sum_{m_1 }^{}\displaystyle\sum_{m_2 }^{} \bra{j' m' }\ket{m_1m_2 } \bra{m_1m_2 }\ket{jm }   
+\end{gather*}
+
+\end{document}
