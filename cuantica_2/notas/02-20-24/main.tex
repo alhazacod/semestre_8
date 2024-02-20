@@ -1,0 +1,67 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 4}
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{}
+\begin{gather*}
+  \ket{m_1 m_2 } = \displaystyle\sum_{j = \left|j_1-j_2 \right|}^{j_1 +j_2 } \displaystyle\sum_{m = j }^{} \ket{jm } \bra{jm }\ket{m_1m_2 }\\
+  \ket{jm } = \displaystyle\sum_{m_1 = -\frac{1}{2}}^{\frac{1}{2}} \displaystyle\sum_{m_2= -\frac{1}{2}}^{\frac{1}{2}} \ket{m_1m_2 } \bra{m_1m_2 }\ket{jm }  \\
+  \text{Tenemos que } \bra{jm }\ket{m_1m_2 } \neq 0 \text{ sii }m = m_1+m_2 \qquad \text{y }\qquad \bra{jm }\ket{m_1m_2 } \text{ si }m \neq m_1+m_2  \\
+  \ket{jm } = \{\ket{00 }, \ket{11 }, \ket{10 }, \ket{1\ -1 }\}\\
+  \ket{m_1m_2 } = \left\{\ket{\frac{1}{2}\frac{1}{2}}, \ket{\frac{1}{2}\ - \frac{1}{2}}, \ket{- \frac{1}{2} \frac{1}{2}}, \ket{- \frac{1}{2}\ - \frac{1}{2}}\right\}\\
+  \bra{11 }\ket{\frac{1}{2}\frac{1}{2}} \neq 0 \qquad \qquad \bra{11}\ket{\cross \cross } = 0 \\
+  \bra{1\ -1 }\ket{- \frac{1}{2} \ - \frac{1}{2}} \neq 0 \qquad \qquad \bra{1 \ -1 }\ket{\cross \cross } = 0 \\
+  \text{Entonces }\\
+  \ket{jm } = \{\ket{00 }, \ket{10 }\} \qquad \qquad \ket{m_1m_2 } = \left\{ \ket{\frac{1 }{2} \ - \frac{1}{2}}, \ket{- \frac{1}{2} \frac{1}{2}}   \right\}\\
+  \begin{bmatrix}
+      \ket{00 } \\
+      \ket{10 }  
+  \end{bmatrix} = \begin{bmatrix}
+      ? & ? \\
+      ? & ?
+  \end{bmatrix} \begin{bmatrix}
+      \ket{\frac{1}{2} \ -\frac{1}{2}} \\
+      \ket{- \frac{1}{2}\  \frac{1}{2}}
+    \end{bmatrix}  \\
+    \text{Unitario 2x2 real }\rightarrow \begin{bmatrix}
+        \cos{\alpha} & -\sin{\alpha} \\
+        \sin{\alpha} & \cos{\alpha}
+    \end{bmatrix}  \ \ \alpha= \frac{\pi}{4 }\\
+    \ket{00 } = \frac{1}{\sqrt{2 } } \left(\ket{\frac{1}{2}\ -\frac{1}{2}} - \ket{-\frac{1}{2} \ \frac{1}{2}}\right)\\
+    \ket{10 } = \frac{1}{\sqrt{2 } } \left(\ket{\frac{1}{2}\ -\frac{1}{2}} + \ket{-\frac{1}{2} \ \frac{1}{2}}\right)
+\end{gather*}
+
+
+\end{document}
