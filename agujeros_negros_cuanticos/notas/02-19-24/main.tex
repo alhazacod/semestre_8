@@ -1,0 +1,95 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 3}
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Formalismo U-T }
+De la clase pasada
+\begin{gather*}
+  \underset{\text{El vacio }}{\bra{0(\beta)}\hat A \ket{0(\beta)} } \overset{?}{=}<\hat A > = \frac{\sum_{n }^{} \bra{n }\hat A \ket{n } e ^ {-\beta E_n }   }{Z (\beta )} 
+\end{gather*}
+Teniamos que
+\begin{gather*}
+  \ket{0(\beta)} = \displaystyle\sum_{n }^{} f_n(\beta) \ket{n } 
+\end{gather*}
+donde $ \ket{n } $ son bases del espacio de Hilbert.
+
+\hfill 
+
+Operando con esto llegamos a 
+\begin{gather*}
+  f_n^*(\beta) f_m(\beta)= Z ^ {-1 }(\beta)\ \ \delta _{nm} e ^ {-\beta E_n } 
+\end{gather*}
+
+Cuando empezamos a hacer el desarrollo suposimos un espacio de Hilbert $ \mathcal H  $ con bases $ \{\ket{n }\} $. Ahora vamos a definir un nuevo espacio de hilbert compuesto por el espacio original y uno nuevo $ \bar{\mathcal H } = \mathcal H \otimes \tilde{\mathcal H}$. Ahora vamos a definir $ \ket{0(\beta)} \in \bar{\mathcal H } $, por lo tanto 
+\begin{gather*}
+  \ket{0(\beta)} = \displaystyle\sum_{n }^{} f_n(\beta) \ket{n }, \qquad \qquad \text{Donde }\ket{n }\in \mathcal H, \ f_n(\beta) \in \tilde{\mathcal H }  
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\textbf{Estructura de los espacios $ \mathcal H, \ \tilde{\mathcal H } $}
+
+Se introduce un sistema auxiliar caracterizado por $ \hat{\tilde{H }} $ tal que 
+\begin{gather*}
+   \hat{\tilde{H }} \ket{\tilde n } = E_n \ket{\tilde n }, \qquad \qquad \bra{\tilde n }\ket{\tilde m } = \delta _{nm }  
+\end{gather*}
+
+Los estados en $ \bar{\mathcal H } $ se expresan 
+\begin{gather*}
+  \ket{n,m } = \ket{n }\otimes \ket{\tilde m } 
+\end{gather*}
+Esto significa que 
+\begin{gather*}
+  <\hat A> = \bra{\tilde m, n }\hat A \ket{n', \tilde m'} = \bra{\tilde m } \bra{n } \hat A \ket{n' } \ket{\tilde m' } = \bra{n }\hat A \ket{n' }\bra{\tilde m }\ket{\tilde m' } = \bra{n }\hat A \ket{n' } \delta _{mm'}       \\
+  <\hat{\tilde A }> = \bra{\tilde m, n }\hat{\tilde A }\ket{n',\tilde m' } = \bra{\tilde m }\hat{\tilde A }\ket{\tilde m' }\delta _{nn'}   
+\end{gather*}
+
+\hfill 
+
+\textbf{Definicion de }$ f_n(\beta)  $ \textbf{en }$ \tilde{\mathcal H } $
+\begin{gather*}
+  f_n(\beta) := e ^ {-\frac{1}{2} \beta E_n}Z ^ {-1/2 }(\beta) \ket{\tilde n } 
+\end{gather*}
+
+Entonces podemos reescribir 
+\begin{align*}
+  \ket{0(\beta)} &= \displaystyle\sum_{n }^{}f_n(\beta)\ket{n } \\
+             &= \displaystyle\sum_{n }^{} e ^ {-\frac{1}{2} \beta E_n}Z ^ {-1/2 }(\beta)\ \ \ket{\tilde n } \otimes \ket{n }\\
+             &= Z ^ {-1/2 }(\beta)\displaystyle\sum_{n }^{} e ^ {-\frac{1}{2} \beta E_n}\ \ \ket{n,\ \tilde n }
+\end{align*}
+
+\end{document}
