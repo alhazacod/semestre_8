@@ -12,7 +12,7 @@
 \usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
 \usepackage{titling}
 
-\title{Clase 3}
+\title{Clase 4 }
 \author{Manuel Garcia.}
 \date{\today}
 
@@ -57,40 +57,44 @@ Cuando empezamos a hacer el desarrollo suposimos un espacio de Hilbert $ \mathca
   \ket{0(\beta)} = \displaystyle\sum_{n }^{} f_n(\beta) \ket{n }, \qquad \qquad \text{Donde }\ket{n }\in \mathcal H, \ f_n(\beta) \in \tilde{\mathcal H }  
 \end{gather*}
 
-\hfill 
-
-\hfill 
-
-\textbf{Estructura de los espacios $ \mathcal H, \ \tilde{\mathcal H } $}
-
-Se introduce un sistema auxiliar caracterizado por $ \hat{\tilde{H }} $ tal que 
-\begin{gather*}
-   \hat{\tilde{H }} \ket{\tilde n } = E_n \ket{\tilde n }, \qquad \qquad \bra{\tilde n }\ket{\tilde m } = \delta _{nm }  
-\end{gather*}
-
-Los estados en $ \bar{\mathcal H } $ se expresan 
-\begin{gather*}
-  \ket{n,m } = \ket{n }\otimes \ket{\tilde m } 
-\end{gather*}
-Esto significa que 
-\begin{gather*}
-  <\hat A> = \bra{\tilde m, n }\hat A \ket{n', \tilde m'} = \bra{\tilde m } \bra{n } \hat A \ket{n' } \ket{\tilde m' } = \bra{n }\hat A \ket{n' }\bra{\tilde m }\ket{\tilde m' } = \bra{n }\hat A \ket{n' } \delta _{mm'}       \\
-  <\hat{\tilde A }> = \bra{\tilde m, n }\hat{\tilde A }\ket{n',\tilde m' } = \bra{\tilde m }\hat{\tilde A }\ket{\tilde m' }\delta _{nn'}   
-\end{gather*}
-
-\hfill 
-
 \textbf{Definicion de }$ f_n(\beta)  $ \textbf{en }$ \tilde{\mathcal H } $
 \begin{gather*}
   f_n(\beta) := e ^ {-\frac{1}{2} \beta E_n}Z ^ {-1/2 }(\beta) \ket{\tilde n } 
 \end{gather*}
 
-Entonces podemos reescribir 
 \begin{align*}
   \ket{0(\beta)} &= \displaystyle\sum_{n }^{}f_n(\beta)\ket{n } \\
              &= \displaystyle\sum_{n }^{} e ^ {-\frac{1}{2} \beta E_n}Z ^ {-1/2 }(\beta)\ \ \ket{\tilde n } \otimes \ket{n }\\
              &= Z ^ {-1/2 }(\beta)\displaystyle\sum_{n }^{} e ^ {-\frac{1}{2} \beta E_n}\ \ \ket{n,\ \tilde n }
 \end{align*}
+
+Por lo tanto 
+
+\begin{align*}
+  \bra{0(\beta)}\hat A \ket{0(\beta)} &= Z ^ {-1 }(\beta) \displaystyle\sum_{n,m }^{} e ^ {- \frac{\beta}{2}(E_n+E_m )} \bra{n }\vec A \ket{n }\delta _{nm }    \\
+    &=Z ^ {-1 }(\beta) \displaystyle\sum_{n }^{} e ^ {- \beta E_n} \bra{n }\vec A \ket{n }
+\end{align*}
+
+\section{Interpretacion Física del formalismo U-T }
+Notemos la necesidad de dos hamiltonianos $ \hat H , \ \hat{\tilde H } $, hay que modelar dos sistemas. Con esto se logra describir un sistema termico.  Esto se puede ver como un ensamble termico (el sistema a estudiar y el baño termico), esto se puede ver como el sistema a estudiar y el resto del universo.
+
+
+Si dos subsistemas son idénticas copias uno del otro y están entrelazados (\textit{entangled}) cuanticamente 
+\begin{gather*}
+  \underset{\text{fase compartida}}{Z ^ {-1/2 }(\beta) \displaystyle\sum_{n }^{} e ^ {- \beta E_n}} \underset{\text{estado compuesto}\ \ket{n }\otimes \ket{\tilde n}}{\ket{n,\ \tilde n }}
+\end{gather*}
+de tal manera que conforman un estado puro para el sistema total, cada uno de ellos llega macroscópicamente indistingible de un cuerpo caliente a temperatura definida T.
+
+\section{Vario de los Campos en el Formalismo U-T }
+Campos para un grado de libertad. 
+
+\textbf{Modelo: } Ensamble de bosones libres con frecuencia $ \omega $.
+
+\hfill 
+
+\hfill 
+
+Descripcion de $ N  $ bosones libres no interactuantes en equilibrio térmico en términos de un grado de libertad.
 
 
 \end{document}
