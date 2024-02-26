@@ -1,0 +1,122 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 5}
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Formulación Cuántica del Teorema de Liouville}
+\begin{gather*}
+  i \hbar \frac{\partial \tilde \rho }{\partial t } = [\hat H ^ {(N) }, \hat \rho] 
+\end{gather*}
+Cuando $ \hat \rho $ es una funcion de la energia 
+\begin{gather*}
+  \hat \rho = f(\hat H ^ {(N )}) \qquad \rightarrow \qquad \frac{\partial \hat \rho }{\partial t } = 0
+\end{gather*}
+dado que $ [\hat H ^ {(N) }, \hat \rho] = 0 $.
+
+Por el contrario cuando $ \hat \rho  $ depende del tiempo 
+\begin{gather*}
+  i \hbar  \frac{\partial \hat \rho }{\partial t } = \left[  \hat H ^{(N)} , \hat \rho  \right] \neq 0 
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\hfill 
+
+\hfill 
+
+
+
+En el espacio de fase $ 2f $ dimensional del sistema resulta posible definir una hipersuperficie $ \omega(E) $ de dimension $ 2f-1 $, mediante la siguiente integral 
+\begin{gather*}
+  \omega(E) = \displaystyle\int_{E = H(p_1,\cdots , p _{3n } ; q_1,\cdots, q _{2N } )}^{} d\omega 
+\end{gather*}
+Si $ \Delta \Lambda $ es un elemento de volumen del espacio de fase entonces un elemento d ehipersuperficie $ \Delta \omega $ está definido en un espacio de fase de dimension $ 2f-1  $. La hipersuperficie de fase $ \omega(E)  $ de dimensión $ 2f-1  $ envuelve un volumen $ \Lambda $ en el espacio de fase de dumensión $ 2f  $.
+\begin{gather*}
+  \Lambda(E) = \displaystyle\int_{H(p_1, \cdots, p_f;q_1, \cdots, q_f)\leq E }^{}d\Lambda 
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+
+\textbf{Numero de microestados} Tenemos $ E  $ variable y $ V,N  $ fijos. Existe un numero $ W(E,V,N) $ que se determina en términos de la hipersuperficie $ \omega(E,V,N ) $
+\begin{gather*}
+   W(E,V,N) = \frac{\omega(E,V,N)}{\omega_0}
+\end{gather*}
+Es de esperar que las propiedades termodinámicas del sistema no dependan de la constante d eproporcionalidad $ \omega_o ^ {-1 } $. Razon de cambio 
+\begin{gather*}
+  \frac{W_2 }{W_1 } =  \frac{W (E_2,V,N)}{W (E_1,V,N)} = \frac{\omega(E_2,V,N)}{\omega(E_2,V,N  )}
+\end{gather*}
+El volumen 
+\begin{gather*}
+  \Lambda(E,V,N) = \displaystyle\int_{H(p_1, \cdots, p_f;q_1, \cdots, q_f)\leq E }^{}dq_1\cdots dq_f dp_1 \cdots dp_f
+\end{gather*}
+Un cambio en la energia interna del sistema $ \Delta E  $ genera un cambio en el area de la hipersuperficie 
+\begin{gather*}
+  \Delta\omega = \omega(E_2,V,N) - \omega(E_1,V,N) 
+\end{gather*}
+Dando lugar a 
+\begin{gather*}
+  \Delta\Lambda = \Lambda(E + \Delta E, V,N ) - \Lambda (E,V,N ) = \left(\frac{\partial \Lambda }{\partial E }\right) _{V,N } \Delta E 
+\end{gather*}
+Por el teorema de Cavalleri 
+\begin{gather*}
+  \Delta\Lambda = \omega(E) \Delta E 
+\end{gather*}
+Entonces 
+\begin{gather*}
+  \omega(E) = \frac{\partial \Lambda(E)  }{\partial E}  
+\end{gather*}
+Por lo tanto 
+\begin{gather*}
+  W(E,V,N) = \frac{\omega(E,V,N )}{\omega_0 } = \frac{1}{\omega_0 } \frac{\partial \Lambda }{\partial E } 
+\end{gather*}
+
+\textbf{Volumen en el espacio de fase para el gas ideal de particulas libres }
+\begin{gather*}
+  V = \int_{}^{} d^2 q \qquad \rightarrow \qquad \int_{}^{}dq_1 \cdots dq _{3N }  = V ^ {N } 
+\end{gather*}
+Por lo tanto 
+\begin{gather*}
+  \Lambda (E,V,N)=V^N \int_{H(p,q) \leq E }^{} dp_1 \cdots dp _{3N } = V^N V ^ {\beta} _{3N }  
+\end{gather*}
+\begin{gather*}
+  V ^ {\beta } _{3N }  = \int_{H(p,q) \leq E }^{} dp_1 \cdots dp _{3N }  
+\end{gather*}
+
+
+\end{document}
