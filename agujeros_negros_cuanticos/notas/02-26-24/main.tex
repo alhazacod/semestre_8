@@ -1,0 +1,98 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 5 }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Ensamble de Bosones Libres con Frecuencia $ \omega $ (para un grado de libertad)}
+\textbf{Modelo complejo }
+\begin{gather*}
+  \hat H = \displaystyle\sum_{}^{}\hat H_i, \qquad \qquad Z = \Pi Z_i, \qquad \qquad \hat N = \displaystyle\sum_{}^{} \hat N_i  
+\end{gather*}
+Para un grado de libertad ($ \omega $)
+\begin{gather*}
+  \hat H = \omega \hat a ^\dagger \hat a
+\end{gather*}
+Su ecuacion de valores propios 
+\begin{align*}
+  \hat H \ket{n } &= E_n \ket{n } \\
+                  &= n\omega \ket{n }
+\end{align*}
+$ \hat H  $ tambien se puede escribir $\qquad \qquad \qquad \hat H = \omega \hat N \qquad \text{Donde } \hat N := \hat a^\dagger \hat a  $ 
+
+\hfill 
+
+Entonces 
+\begin{align*}
+  \omega\hat N \ket{n } &= n \omega \ket{n }\\
+  \hat N \ket{n } &= n \ket{n }
+\end{align*}
+$ \{\ket{n }\} $ base para el espacio de Hilbert asociado 
+\begin{gather*}
+  \bra{n }\ket{n' } = \delta _{n n' } \qquad \qquad \sum_{}^{} \ket{n } \bra{n } = 1  
+\end{gather*}
+Vamos a usar la funcion de perticion $ Z = \frac{1}{1 - e ^ {-\beta \omega}} = \displaystyle\sum_{n }^{} e ^ {- \beta n \omega}$.
+
+
+
+
+\section{Reglas de Conmutación }
+\begin{gather*}
+  \left[ \hat a , \hat a  \right] = \left[ \hat a^\dagger  , \hat a ^\dagger  \right] = 0 \\
+  \left[ \hat a  , \hat a ^\dagger   \right] = 1 
+\end{gather*}
+
+
+
+
+\section{Representación de Fock} 
+
+\hfill 
+
+\textbf{Estado de vacío:} 
+\begin{gather*}
+  \hat a \ket{0 } := 0 
+\end{gather*}
+
+\textbf{Base } 
+\begin{gather*}
+  \ket{0 },\ \hat a ^ {\dagger } \ket{0 } , \ \cdots,\  \frac{1}{\sqrt{n! } }(\hat a ^ {\dagger })^n \ket{n }
+\end{gather*}
+donde 
+\begin{gather*}
+  \frac{1}{\sqrt{n! } }(\hat a ^ {\dagger })^n \ket{0 } = \ket{n } 
+\end{gather*}
+
+
+
+\end{document}
