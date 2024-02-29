@@ -1,0 +1,58 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 5}
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Teoria de perturbaciones independiente del tiempo}
+Tenemos $ \{\phi_n (x), E_n ^ {(0 )}\} $
+\begin{gather*}
+  H_0 \phi_n (x) = E_n ^ {(0)} \phi_n (x)  
+\end{gather*}
+Vamos a hacer 
+\begin{gather*}
+  H = H_0 +\lambda \omega \\
+  E_n = E_n ^ {(0)} + \lambda E_n ^ {(1)} + \lambda^2 E_n ^ {(2) } + \cdots = \displaystyle\sum_{k = 0 }^{ \infty} \lambda ^ {k } E_n ^ {(k)}\\
+  \phi_n = \phi_n ^ {(0)} + \lambda \phi_n ^ {(1)} + \lambda^2 \phi_n ^ {(2)} + \cdots = \displaystyle\sum_{k = 0 }^{\infty} \lambda^k \phi_n ^ {(k)}
+\end{gather*}
+Entonces podemos reescribir 
+\begin{gather*}
+  (H_0 + \lambda \omega) \displaystyle\sum_{k = 0 }^{\infty} \lambda ^ {k } \phi_n ^ {(k)} = \displaystyle\sum_{l = 0 }^{\infty} \lambda ^ {l } E_n ^ {(l)} \displaystyle\sum_{r = 0 }^{\infty} \lambda ^ {r } \phi_n ^ {(r)} = \displaystyle\sum_{l = 0 }^{} \displaystyle\sum_{ r = 0 }^{} \lambda ^ {l + r } E _{n } ^ {l } \phi_n ^ {(r)}
+\end{gather*}
+Hacemos $ l + r = 1  $ 
+\begin{gather*}
+  H_0 \phi_n + \lambda \omega \phi_n ^ {(0 )} + \cdots = E_n ^ {(0)}\phi_n + \lambda(E_n ^ {(0) }\phi_n ^ {(1)} + E_n ^ {(1)}\phi_n ) 
+\end{gather*}
+
+
+\end{document}

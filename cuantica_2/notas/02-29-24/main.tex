@@ -1,0 +1,75 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 6 }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{}
+\begin{gather*}
+  H \psi_n = E_n \psi_n \\  
+  (H_0 + \lambda w) \displaystyle\sum_{k = 0 }^{ \infty} \lambda ^ {k } \psi _n ^ {(k)} = \displaystyle\sum_{l = 0 }^{\infty} \lambda^l E_n ^ {(l )} \displaystyle\sum_{r= 0 }^{\infty} \lambda ^ {r } \psi_n ^ {(r) } \\
+  \lambda = 0 , l = 0 \qquad E_n \qquad \qquad \qquad \lambda = 0 , r = 0 \qquad \phi_n \\ 
+  = \displaystyle\sum_{ k = 0 }^{ \infty} \lambda ^ {k } \displaystyle\sum_{l = 0 }^{ k } E_n ^ {(l) } \psi_n ^ {r- l }
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\hfill 
+
+\hfill 
+
+a primer orden k = 1 $ E_n = E_n ^ {(0)} + \lambda E_n ^ {(1) } + \cdots \qquad \qquad \psi_n = \phi_n + \lambda \psi_n ^ {(1) } + \cdots$
+\begin{gather*}
+  \lambda\{H_0 \psi_n ^ {(1) } + w \phi_n \} = \lambda \{E_n ^ {(0 )} \psi_n ^ {(1)} + E_n ^ {(1)} \phi_n \}\\
+  H_0 \ket{\psi_n ^ {(1)}} + w \ket{\phi_n } = E_n ^ {(0)}\ket{\psi_n ^ {(1)}} + E_n ^ {(1)} \ket{\phi_n } \\
+  E_n ^ {(1)} = \bra{\phi_n } w \ket{ \phi _n }\\
+  \lambda E_n ^ {(1) } = \bra{\phi_n }\lambda w \ket{\phi_n } = \bra{\phi_n }H_p \ket{\phi_n }  
+\end{gather*}
+
+
+\hfill 
+
+\hfill 
+
+\hfill 
+
+\hfill 
+
+A segundo orden 
+\begin{gather*}
+  E_n ^ {(2)} = \bra{\phi_n } w \ket{\psi_n ^ {(1)}} = \displaystyle\sum_{m \neq n }^{}\bra{\phi_n }w \ket{\phi_m } \frac{\bra{\phi_m }w \ket{\phi_n } }{E_n ^ {(0)} - E_m ^ {(0)}} = \displaystyle\sum_{m \neq n }^{} \frac{\left|\bra{\phi_n }w \ket{\phi_m } \right|^2 }{E_n ^ {(0)- E_m ^ {(0)}}}   \\
+  \lambda^2 \ket{\psi_n ^ {(2)}} = \displaystyle\sum_{m\neq n , l \neq n }^{} \ket{\phi_m } \frac{\bra{\phi_m } H_p \ket{\phi_l } \bra{\phi_l }H_p \ket{\phi_n }  }{(E_n ^ {(0)} - E_n ^ {(0)})(E_n ^ {(0) - E_l ^ {(0)}})} - \displaystyle\sum_{m \neq n }^{} \ket{\phi_m } \frac{\bra{\phi_n }H_p \ket{\phi_m }\bra{\phi_m }H_p \ket{\phi_m }  }{(E_n ^ {(0 )} - E_m ^ {(0)})^2}
+\end{gather*}
+\end{document}

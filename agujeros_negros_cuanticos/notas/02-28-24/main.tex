@@ -1,0 +1,108 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 6 }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Representación de Fock }
+\begin{gather*}
+  \hat a \ket{0 } := 0 
+\end{gather*}
+\textbf{Base } $ \ket{0 },\ \hat a ^ {\dagger } \ket{0 } , \ \cdots,\  \frac{1}{\sqrt{n! } }(\hat a ^ {\dagger })^n \ket{0 } $ donde $ \frac{1}{\sqrt{n! } }(\hat a ^ {\dagger })^n \ket{0 } = \ket{n } $
+
+\hfill 
+
+\hfill 
+
+\textbf{Complementariamente }
+\begin{gather*}
+  \hat a ^ {\dagger } \ket{n } = (n+1)^ {\frac{1}{2}} \ket{n+1 }\\
+  \hat a \ket{n } = n ^ {\frac{1}{2}} \ket{n - 1 }\\
+  \bra{0 }\hat N \ket{0 } = \bra{0 }\hat a ^ {\dagger } \hat a \ket{0 } = 0  
+\end{gather*}
+La ultima ecuacion nos dice que en promedio la energia del vacio es cero pero eso no quiere decir que no haya fluctuaciones de energia en este.
+\begin{gather*}
+  \bra{0 }\hat H \ket{0 } = \bra{0 }\omega \hat N \ket{0 } = 0 \\
+  \hat H \ket{0 } = \omega\hat N \ket{0 } = \omega \hat a ^ {\dagger }\hat a \ket{0 } = 0 
+\end{gather*}
+Pero recordemos que tenemos dos espacios de Hilbert $ \mathcal H, \ \tilde{\mathcal H} $ con dos Hamiltonianos $ \hat H , \ \hat{\tilde H} $
+
+\subsection{Modelo del Sistema Auxiliar }
+\begin{gather*}
+  \hat H = \omega \hat a ^ {\dagger } \hat a \qquad \rightarrow \qquad \hat{\tilde H } = \omega \hat{\tilde a }^ {\dagger } \hat{\tilde a}
+\end{gather*}
+Notemos que en el sistema auxiliar tambien utilizamos $ \omega $ y no $ \tilde \omega $ ya que el sistema es el mismo y lo medible va a ser igual en ambos subsistemas. En este subsistema tenemos nuevos operadores 
+\begin{gather*}
+  \hat{\tilde a } ^ {\dagger } \hat{\tilde a} = \hat{\tilde N } \qquad \qquad \qquad \hat{\tilde N  } \ket{\tilde n } = n \ket{\tilde n }
+\end{gather*}
+
+\textbf{Reglas de conmutacion }
+\begin{gather*}
+  \left[ \hat{\tilde a} , \hat{\tilde a}  \right]  = \left[\hat{\tilde a }^ {\dagger }, \hat{\tilde a } ^ {\dagger }\right] = 0 \\
+  \left[ \hat{\tilde a } , \hat{\tilde a }^ {\dagger }  \right] = 1
+\end{gather*}
+
+Se asume 
+\begin{gather*}
+  \left[ \hat a  ,  \hat{\tilde a }  \right] = \left[ \hat a  , \hat{\tilde a } ^ {\dagger }  \right] = \left[ \hat a ^ {\dagger } , \hat{\tilde a }^ {\dagger }  \right] = \left[ \hat a ^ {\dagger } , \hat{\tilde a }  \right] = 0
+\end{gather*}
+
+\textbf{Representación de Fock }
+\begin{gather*}
+  \hat{\tilde a } \ket{\tilde 0 } := 0
+\end{gather*}
+
+\textbf{Base } $ \ket{\tilde 0 }, \hat{\tilde a}^ {\dagger }, \cdots, \frac{1}{\sqrt{n! } }\left(\hat{\tilde a } ^ {\dagger }\right)^n \ket{\tilde 0 } $
+
+Complementariamente 
+\begin{gather*}
+  \hat{\tilde a } ^ {\dagger } \ket{\tilde n } = (n+1) ^ {\frac{1}{2}}\ket{\tilde n + 1 }\\
+  \hat{\tilde a } \ket{\tilde n } = n ^ {\frac{1}{2}} \ket{\tilde n - 1 }  \\
+  \ket{0, \tilde 0 } \equiv \ket{\bar 0 }
+\end{gather*}
+
+\section{Para el sistema total }
+\begin{gather*}
+  \ket{\bar 0 }, \ \bar a ^ {\dagger } \ket{\bar 0 } = \ket{1, \tilde 0 },\ \hat{\tilde a } ^ {\dagger } \ket{\bar 0 } = \ket{0,\tilde 1},\ \hat a ^ {\dagger } \hat{\tilde a } ^ {\dagger } \ket{\bar 0 }= \ket{1, \tilde 1 }, \cdots
+\end{gather*}
+
+\section{Cálculo de $ \ket{0(\beta)} $}
+\begin{align*}
+  \ket{0(\beta)} &= Z ^ {- \frac{1}{2}}(\beta) \displaystyle\sum_{n }^{} e ^ {- \beta \frac{E_n }{2}}\ket{n , \tilde n }\\
+  &= Z ^ {- \frac{1}{2}}(\beta) \displaystyle\sum_{n }^{} e ^ {- \beta \frac{E_n }{2}} \ket{n } \otimes \ket{\tilde n }\\
+  &=Z ^ {- \frac{1}{2}}(\beta) \displaystyle\sum_{n }^{} e ^ {- \beta \frac{E_n }{2}} \frac{1}{\sqrt{n! } }\left(\hat a ^ {\dagger }\right)^n \ket{0 } \otimes \frac{1}{\sqrt{n! } } \left(\hat{\tilde a }^ {\dagger }\right) ^ {n } \ket{\tilde 0 } \\
+  &= Z ^ {- \frac{1}{2}}(\beta) \displaystyle\sum_{n }^{} e ^ {- \beta \frac{n\omega }{2}} \frac{1}{n! } \left(\hat a ^ {\dagger }\right)^n\left(\hat{\tilde a} ^ {\dagger }\right)^n \ket{\bar 0 }
+\end{align*}
+
+
+\end{document}
