@@ -1,0 +1,128 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 7 }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Cumplimiento de la Segunda Ley de la Termodinámica }
+Para dos sistemas 
+\begin{gather*}
+   \Omega(E) = \Omega_1(E_1)\Omega_2(E_2) \\
+   d \Omega (E) = d \left[\Omega_1(E_1)\Omega_2(E_2)\right] = 0 
+\end{gather*}
+Sujeta a la condicion 
+\begin{gather*}
+  dE = dE_1 + dE_2 = 0  \\
+  dE_1 = dE_2
+\end{gather*}
+Obtenemos 
+\begin{gather*}
+  \frac{\partial ln \left[\Omega_1 (E_1 )\right] }{\partial E_1 } dE_1 = -\frac{\partial ln \left[\Omega_2 (E_2 )\right] }{\partial E_2 } dE_2  
+\end{gather*}
+Teniendo en cuenta que $ dE_1 0 = dE_2  $
+\begin{gather*}
+  \left[\frac{\partial ln \left[\Omega_1 (E_1 )\right] }{\partial E_1 } \right]_{E_1= U_1} = \left[\frac{\partial ln \left[\Omega_2 (E_2 )\right] }{\partial E_2 } \right] _{E_2 = U_2 } \\
+  \left[\frac{\partial S_1(U_1) }{\partial U_1 } \right]_{U_1} = \left[\frac{\partial S_2(U_2) }{\partial U_2 } \right]_{U_2}
+\end{gather*}
+La ultima igualdad sugiere que se puede definir la temperatura de algún sistema de la siguiente manera 
+\begin{gather*}
+  \frac{\partial S(U) }{\partial U } = \frac{1}{T} 
+\end{gather*}
+Por lo tanto 
+\begin{gather*}
+  T_1 = T_2  
+\end{gather*}
+
+
+\section{Derivacion de la Termodinamica Estadística }
+Hasta el momento se ha definido estadisticamente dos variables termodinámicas, la entropia $ S_1  $ y la energia interna $ E_1  $.
+
+El cambio de la entropia enuna transformacion infinitesimal casuaestática 
+\begin{gather*}
+  dS(E,V ) = \left(\frac{\partial S  }{\partial E }\right)_V dU + \left(\frac{\partial S  }{\partial V }\right)_E dV 
+\end{gather*}
+Como $ T = \left(\frac{\partial E }{\partial S}\right)_V  $ y la presión $ P  $ está definida por 
+\begin{gather*}
+  P \equiv T \left(\frac{\partial S }{\partial V}\right)_E; \qquad \qquad P = \left(\frac{\partial E }{\partial V}\right)_S 
+\end{gather*}
+Sustituyendo obtenemos 
+\begin{gather*}
+  dS = \frac{1}{T}(dE + P dV) = dE = TdS - PdV 
+\end{gather*}
+Que corresponde a la primera ley de la termodinamica.
+
+\hfill 
+
+\hfill 
+
+La energia libre de Helmholtz 
+\begin{gather*}
+  dA = dE - T dS \qquad \qquad \qquad A = E -TS 
+\end{gather*}
+Y la energia libre de Gibbs 
+\begin{gather*}
+  dG = dA = PdV = dE - T dS + P dV \qquad \qquad G = A +PV = E - TS + PV 
+\end{gather*}
+El calor especifico 
+\begin{gather*}
+  C_V \equiv T \left(\frac{\partial S  }{\partial T }\right)_V = \left(\frac{\partial E  }{\partial T }\right)_V   \\
+  C_P = T \left(\frac{\partial S  }{\partial T }\right)_P = \left(\frac{\partial (E + PV ) }{\partial T }\right)_P = \left(\frac{\partial (H)  }{\partial T}\right)
+\end{gather*}
+Donde $ H = E + PV  $.
+
+\section{Ensamble Micronanónico Clásico }
+Dado que la hipersuperficie $ \omega(E) $ envuelve un volumen $ \Lambda(E) $ en el espacio de fase del sistema y recordando que 
+\begin{gather*}
+  d\Lambda = d\vec q d\vec p = dq_1dq_2 \cdots dq _{3N } dp_1 dp_2 \cdots dp _{3N}  
+\end{gather*}
+Entonces 
+\begin{gather*}
+  \Lambda(E) = \int_{H(p_1, \cdots p _{3N } ; q_1, \cdots, q _{3N } )\leq E }^{}  dq_1dq_2 \cdots dq _{3N } dp_1 dp_2 \cdots dp _{3N}
+\end{gather*}
+
+Un ensamble estadistico uniforme queda definido como la funcion densidad de probabilidad $ \rho(\vec p, \vec q ) $. Este ensamble uniforme tiene la forma 
+\begin{gather*}
+  \rho(\vec p, \vec q ) = \gamma ^ {-1 } \theta (E - H (\vec p, \vec q ))
+\end{gather*}
+Siendo $ \theta(z)  $ una funcion paso y $ \gamma(E)  $ es una constante determinada por la condicion de normalización. 
+\begin{gather*}
+  \gamma(E) = \int_{\Lambda}^{}  \theta (E - H (\vec p, \vec q )) d\vec q d\vec p
+\end{gather*}
+Para el gas ideal 
+\begin{gather*}
+  \Lambda(E,V,N) = \gamma(E) = V ^ {N } \frac{(2\pi m E ) ^ {3n/2 }}{(3N/2)!} 
+\end{gather*}
+
+
+
+\end{document}
