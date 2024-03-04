@@ -1,0 +1,91 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 7}
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{}
+De la clase anterior 
+\begin{align*}
+  \ket{0(\beta)} &= Z ^ {- \frac{1}{2}}(\beta) \displaystyle\sum_{n }^{} e ^ {- \beta \frac{E_n  }{2}} \ket{n, \tilde n }\\
+  \ket{0(\beta)} &= Z ^ {- \frac{1}{2}}(\beta) \displaystyle\sum_{n }^{} e ^ {- \beta \frac{n\omega }{2}} \frac{1}{n! } \left(\hat a ^ {\dagger }\right)^n\left(\hat{\tilde a} ^ {\dagger }\right)^n \ket{0, \tilde 0 }
+\end{align*}
+
+\textbf{Funcion de particion canonica } (sistema bosonico)
+\begin{gather*}
+  Z ^ {\frac{1}{2}} (\beta) = \frac{1}{\left(\displaystyle\sum_{}^{}e ^ {- \beta \omega n }\right) ^ {\frac{1}{2}}} = \frac{1}{\left(\frac{1}{1 - e ^ {- \beta \omega}}\right)^ {\frac{1}{2}}} = \left(1 - e ^ {- \beta \omega }\right) ^ {\frac{1}{2}}
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\begin{gather*}
+  \displaystyle\sum_{n }^{} e ^ {- \beta \frac{\omega n }{2 }}\frac{1}{n! } \left(\hat a ^ {\dagger }\right)^n\left(\hat{\tilde a} ^ {\dagger }\right)^n = \displaystyle\sum_{n }^{} \frac{1}{n! } \left(e ^ {- \beta \frac{\omega}{2}} \hat a ^ {\dagger } \hat{\tilde a } ^ {\dagger }\right)^ {n } = \exp{ e ^ {- \beta \frac{\omega }{2}}\hat a ^ {\dagger } \hat{\tilde a } ^ {\dagger })} 
+\end{gather*}
+
+Entonces 
+\begin{gather*}
+  \ket{0 (\beta)} = \sqrt{1 - e ^ {- \beta \omega }}  \exp{e ^ {- \beta \frac{\omega}{2}}\hat a ^ {\dagger } \hat{\tilde a } ^ {\dagger }} \underset{=\ket{\bar 0 }}{\ket{0, \tilde 0}} 
+\end{gather*}
+\caja{green}{}{
+  \begin{gather*}
+    \ket{0 (\beta)} = \sqrt{1 - e ^ {- \beta \omega }}  \exp{e ^ {- \beta \frac{\omega}{2}}\hat a ^ {\dagger } \hat{\tilde a } ^ {\dagger }}\ket{\bar 0} 
+  \end{gather*}
+}
+
+\hfill 
+
+\hfill 
+
+Necesitamos definir un operador escalera para $ \ket{0(\beta)} $ tal que 
+\begin{gather*}
+  \hat a(\beta) \ket{0 (\beta)} = 0 
+\end{gather*}
+
+
+
+
+\section{Transformaciones de Bogoliubov (T.B)}
+TB es una transformacion unitaria de una representación unitaria de alguna algebra de relaciones de conmutación (o álgebra de relaciones de anticonmutacion) en otra representacion unitaria, inducida por un isomorfismo del algrebra de las relaciones de conmutación.
+\begin{gather*}
+  \left[ \hat a  , \hat a ^ {\dagger }  \right] = 1 \qquad \rightarrow \qquad \left[ \hat b  ,  \hat b ^ {\dagger }  \right] = 1 \\
+  \hat a = u \hat b + v \hat b ^ {\dagger } \qquad \qquad \hat a ^ {\dagger } = u^* \hat b ^ {\dagger } + v^* \hat b 
+\end{gather*}
+Necesitamos que se conserve el algebra 
+\begin{gather*}
+  \left[ \hat a  , \hat a ^ {\dagger }  \right] = (\left|u \right|^2 + \left|v \right|^2) \left[ \hat b  , \hat b ^ {\dagger }  \right] 
+\end{gather*}
+
+
+\end{document}
