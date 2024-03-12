@@ -1,0 +1,93 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 8 }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Transformaciones de Bogoliubov (T.B)}
+Como es un isomorfismo y en $ \ket{0 } = \ket{0 } \otimes \ket{0 } $ tenemos $ \hat a , \hat a ^ {\dagger } $ y $ \hat{\tilde a }, \hat{\tilde a } ^ {\dagger } $ entonces en $ \ket{0(\beta)} $ necesitamos tener $  \hat{\tilde a }(\beta), \hat{\tilde a } ^ {\dagger }(\beta)  $. Y teniamos que para el caso bosonico.
+\begin{gather*}
+  \ket{0 (\beta)} = \sqrt{1 - e ^ {- \beta \omega }}  \exp{e ^ {- \beta \frac{\omega}{2}}\hat a ^ {\dagger } \hat{\tilde a } ^ {\dagger }}\ket{\bar 0} 
+\end{gather*}
+Para hacer la TB debemos que tener en cuenta que es un isomorfismo por lo que $ [,]\leftarrow \rightarrow [,] $ y $ \{,\}\leftarrow \rightarrow \{,\} $.
+
+Vamos a usar el modelo 
+\begin{gather*}
+  \left[ \hat a  , \hat a ^ {\dagger }  \right] = 1 \quad \rightarrow \quad \left[ \hat b  , \hat b ^ {\dagger }  \right] = 1 
+\end{gather*}
+Por la TB tenemos que
+\begin{gather*}
+  \hat b = u \hat a + v \hat a ^ {\dagger } \qquad \qquad \hat b ^ {\dagger } = u^* \hat a ^ {\dagger } + v^* \hat a 
+\end{gather*}
+Usando las reglas de conmutacion 
+\begin{gather*}
+  \left[ \hat b  ,  \hat b ^ {\dagger }  \right] = \left[ u \hat a + v \hat a ^ {\dagger } ,u^* \hat a ^ {\dagger } + v^* \hat a  \right]  = (u^2 - v^2) \left[ \hat a  , \hat a ^ {\dagger }  \right]
+\end{gather*}
+$ u  $ y $ v  $ debe satisfacer $  u ^2 - v ^2 = 1  $
+
+\hfill 
+
+\hfill 
+
+Teniamos las reglas de conmutacion 
+\begin{gather*}
+  \left[ \hat a  , \hat{\tilde a }  \right] = \left[ \hat a ^ {\dagger } , \hat{\tilde a }^ {\dagger }  \right] = \left[ \hat a ^ {\dagger } , \hat{\tilde a } ^ {\dagger }  \right] = \left[ \hat a ^ {\dagger } , \hat{\tilde a } ^ {\dagger }  \right] = 0\\
+  \left[ \hat{ a } , \hat{ a }^ {\dagger }  \right] = \left[ \hat{\tilde a } , \hat{\tilde a }^ {\dagger }  \right] = 1
+\end{gather*}
+Podemos tomar $ \left[ \hat a  ,  \hat{\tilde a } ^ {\dagger }  \right] \rightarrow  \left[ \hat a(\beta)  ,  \hat{\tilde a } ^ {\dagger }(\beta)  \right]$
+\begin{gather*}
+  \hat a = u(\beta) \hat a (\beta) + v (\beta) \hat{\tilde a}^ {\dagger }(\beta) 
+\end{gather*}
+Pero aún nos falta alguna transformacion que involucre $ \hat{\tilde a } $ y $ \hat a ^ {\dagger } $. Para esto podemos hacer $ \left[ \hat{\tilde a } , \hat a ^ {\dagger }  \right] \rightarrow \left[ \hat{\tilde a }(\beta) , \hat a ^ {\dagger }(\beta)  \right] $
+\begin{gather*}
+  \hat{\tilde a} = u(\beta) \hat{ \tilde a }(\beta) + v (\beta) \hat{ a}^ {\dagger }(\beta) 
+\end{gather*}
+Podemos hacer 
+\begin{align*}
+  \left[ \hat a  , \hat{\tilde a }  \right] &= 0 \\
+      &= (u ^2(\beta) - v^2(\beta)) \left[\hat a (\beta), \hat{\tilde a }(\beta)\right]
+\end{align*}
+Si $ u ^2(\beta) - v ^2(\beta) = 1 \rightarrow \left[\hat a , \hat{\tilde a }\right]=\left[\hat a (\beta), \hat{\tilde a }(\beta)\right]=0 $
+
+
+
+\section{Energia Total del Sistema Térmico}
+considere la siguiente identidad 
+\caja{green}{}{
+  \begin{gather*}
+    \hat a ^ {\dagger } \hat a - \hat{\tilde a } ^ {\dagger } \hat{\tilde a } = \hat a ^ {\dagger }(\beta) \hat a(\beta) - \hat{\tilde a } ^ {\dagger }(\beta) \hat{\tilde a }(\beta) 
+  \end{gather*}
+}
+
+
+\end{document}

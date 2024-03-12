@@ -1,0 +1,104 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase 10 }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Ensamble Estadístico Canónico de $ N  $ Partículas y Ejemplos}
+\subsection{Fluctuacion de la Energía en el Ensamble Canónico }
+El promedio estadistico de la energia 
+\begin{gather*}
+  \expval{E }
+\end{gather*}
+Y el promedio cuadrado 
+\begin{gather*}
+  \expval{E^2 } 
+\end{gather*}
+en terminos de la función de particion $ Q_N = Q(T,V,N ) $
+\begin{gather*}
+  \expval{E } = \frac{\sum_{j }^{} E_j e ^ {- \beta E_j }}{\sum_{j }^{} e ^ {- \beta E_j }} = - \frac{1}{Q_N } \frac{\partial Q_N  }{\partial \beta} \\
+  \expval{E^2 } = \frac{\sum_{j }^{} E_j^2 e ^ {- \beta E_j }}{\sum_{j }^{} e ^ {- \beta E_j }} = - \frac{1}{Q_N } \frac{\partial^2 Q_N  }{\partial \beta^2 }
+\end{gather*}
+Donde $ Q_N = \sum_{j }^{} e ^ {-\beta E_j } $.
+
+La fluctuacion de la energia 
+\begin{align*}
+  (\expval{\Delta })^2 &= \expval{E^2 } - \expval{E }^2 \\
+  &= \frac{1}{Q_N } \frac{\partial ^2 Q_N  }{\partial \beta^2 } - \frac{1}{Q_N^2 } \left(\frac{\partial  Q_N  }{\partial \beta }\right) \\
+  &= \frac{\partial x }{\partial \beta} \left(\frac{\partial \Phi  }{\partial \beta}\right) 
+\end{align*}
+
+\textbf{Potencial Canonico }
+\begin{gather*}
+  \log{Q_N } = S ^ {(0) } - \beta E \equiv \Phi = - \frac{1}{\kappa_B T }A = - \beta A 
+\end{gather*}
+\begin{gather*}
+  S ^ {(0)} = \sum_{j }^{} p_j \log{p_j} 
+\end{gather*}
+
+Luego de mucha puta algebra se llega a 
+\caja{green}{}{
+  \begin{gather*}
+    (\Delta E )^2 = - \frac{\partial E  }{\partial \beta} = \tau^2 c  
+  \end{gather*}
+}
+Donde $ \tau $ es la energia termica y $ c  $ es el calor especifico. El carlor especifico en terminos del calor especifico por particula es $ c = N \bar c  $, donde $ \bar c  $ es el calor promedio especifico por particula.
+\begin{gather*}
+  \Delta E = \tau \sqrt{c }  = \tau \sqrt{N\bar c }  
+\end{gather*}
+$ E  $ se puede escribir en terminos d ela energia promedio por particula $ \bar \epsilon  $ 
+\begin{gather*}
+  \frac{\Delta E }{\expval{E }} = \frac{\tau \sqrt{N } \sqrt{\bar c } }{N \bar \epsilon} = \tau \frac{\sqrt{\bar c } }{\bar \epsilon} \frac{1}{\sqrt{N } } \approx \frac{1}{\sqrt{N } } 
+\end{gather*}
+
+\subsection{Equivalencia entre los ensambles microcanonico y canonico }
+Del principio de boltzman 
+\begin{gather*}
+  S = \kappa_B \ln{W } = \beta_B \ln{D(E)\Delta E }
+\end{gather*}
+Siendo $ D(E)  $ la densidad de estados y $ \Delta E  $ el rango de nergía contenido en el intervalor $ (E - \Delta E/2 , E + \Delta E/2 ) $. La función de partición canónica para el sistema macroscópico de N partículas también se puede definir como 
+\begin{gather*}
+  Q_N = \displaystyle\sum_{j }^{} e ^ {- E_j /\kappa_B T } = \displaystyle\int_{}^{} e ^ {- E/\kappa_B T }D(E) dE \\
+  \expval{E } = \displaystyle\sum_{j }^{} E_j p_j = \frac{\displaystyle\int_{}^{} Ee ^ {- E/\kappa_B T }D(E) dE}{\displaystyle\int_{}^{} e ^ {- E/\kappa_B T }D(E) dE}
+\end{gather*}
+Como el denominador corresponde a la funcion de particion 
+\begin{gather*}
+  Q_N \approx e ^ {- U /\kappa_B T }D(U) \Delta E  
+\end{gather*}
+y 
+\begin{gather*}
+   \displaystyle\int_{}^{} Ee ^ {- E/\kappa_B T }D(E) dE \approx e ^ {- U /\kappa_B T }D(U) \Delta E
+\end{gather*}
+
+
+\end{document}
