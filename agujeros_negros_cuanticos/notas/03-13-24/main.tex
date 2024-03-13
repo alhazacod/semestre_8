@@ -1,0 +1,112 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\usepackage{mathbbol}
+
+\title{Clase 10 }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Campos Sobre Variedades Curvas }
+
+\caja{black}{Apéndice A }{
+  \textbf{Observador Acelerado de Rindler }
+  De los principios de la teoria de la relatividad especial 
+  \begin{itemize}
+    \item Espacio de $ c $-vectores $ \mathcal M  $
+      \begin{gather*}
+        X \cdot X = - x ^ {0 } y ^ {0 } + x ^ {1 } y ^ {1 } + x ^ {2 }y ^ {2 } + x ^ {3 } y ^ {3 } =\eta _{\mu\nu} x ^ {\mu} x ^ {\nu} \qquad \text{para } X , Y \in \mathcal M   
+      \end{gather*}
+    \item Invariantes 
+      \begin{gather*}
+        \text{Con }\mathbb u, \mathbb a \in \mathcal M \quad \text{con } \mathbb u \text{ la c-velocidad y }\mathbb a \text{ es la c-aceleracion. }\\
+        \mathbb u\cdot \mathbb u = \mathbb u ^ {2 } = - c ^ {2 } \\
+        \mathbb a \cdot \mathbb u = 0 
+      \end{gather*}
+    \item 
+      \begin{gather*}
+        \mathbb u = \frac{d X(\tau ) }{d \tau } \qquad \qquad \mathbb u = \gamma(\vec u ) (c, \vec u ) \\
+        \text{Con }\\
+        \gamma(\vec u )= \frac{d t  }{d  \tau} = \frac{1}{\sqrt{1 - \frac{u ^2}{c ^2}} } \qquad \qquad \vec u = \frac{d \vec r (t) }{d t } \\
+        \mathbb u ^ {2 } = \eta _{\alpha\beta} u ^ {\alpha} u ^ {\beta} = (u ^ {0 }, u ^ {1 }, u ^ {2 }, u ^ {3 }) = (c\gamma, \gamma u_x, \gamma u_y, \gamma u_z)
+      \end{gather*}
+      Se llega a 
+      \begin{gather*}
+        \mathbb a = \frac{d \mathbb u  }{d \tau} = \gamma(\vec u ) \left(\frac{d \gamma(\vec u ) }{d t} c , \quad \frac{d \gamma(\vec u ) }{d t } \vec u + \gamma(\vec u ) \vec a \right) 
+      \end{gather*}
+  \end{itemize}
+}
+
+\hfill 
+
+\hfill 
+
+\hfill 
+
+\hfill 
+
+\hfill 
+
+\underline{Modelo canónico de una partícula desplazándose con aceleración propia ocnstante $ \vec a \equiv \vec g  $} esta es la misma aceleracion propia $ \mathbb a \cdot \mathbb a = \mathbb a ^ {2 } = (0,\vec g ) \cdot (0, \vec g ) = g ^ {2 } $ (en el sistema inercial de la particula un instante $ t = t_0  $).
+
+Podemos reescribir como 
+\begin{align*}
+  \mathbb a ^ {2 } &= \eta _{\alpha\beta}  a ^ {\alpha\beta}; \qquad \qquad \mathbb a = (0,\vec g ) \\
+  &= \eta _{00 }  (a ^ {0 } ) ^ {2 } + \eta _{11 }  a ^ {1 } a ^ {1 } \\
+  &= - (a ^ {0 }) ^ {2 } + ( a ^ {1 }) ^ {2 } = \left|\vec g \right| ^ {2 }
+\end{align*}
+Tenemos que 
+\begin{gather*}
+  \mathbb a \cdot \mathbb u = - a ^ {0 } a ^ {0 } + a ^ {1 } a ^ {1 } = 0 \qquad \qquad u ^ {0 } u ^ {1 } = u ^ {1 } u ^ {0 } \quad \rightarrow \quad u ^ {1 } u ^ {0 } - u ^ {0 } u ^ {1 } = 0 \\
+  - a ^ {0 } u ^ {0 } + a ^ {1 } u ^ {1 } = 0 \qquad \qquad - g u ^ {1} u ^ {0 } + g u ^ {0 } u ^ { 1 } = 0   
+\end{gather*}
+Entonces podemos plantear 
+\begin{gather*}
+   g u ^ {1 } = a ^ {0 } \quad \rightarrow \quad a ^ {0 } = \frac{d u ^ {0 } }{d \tau} = g u ^ {1 }\\
+   g u ^ {0 } = a ^ {1 } \quad \rightarrow \quad a ^ {1 } = \frac{d u ^ {1 } }{d \tau} = g u ^ {0 }\\
+\end{gather*}
+Reescribiendo estos terminos 
+\begin{gather*}
+  \frac{d ^2 t  }{d \tau^2 } - g \frac{d x  }{d \tau} = 0 \qquad \qquad 
+  \frac{d ^2 x  }{d \tau^2 } - g \frac{d t  }{d \tau} = 0 
+\end{gather*}
+Sean sus soluciones particulares 
+\begin{gather*}
+  t = g ^ {-1 } \sinh{g\tau} \\
+  x = g ^ {-1 } \cosh{g\tau}
+\end{gather*}
+Esto es una hiperbola.
+\begin{gather*}
+  x^2 - t^2 = g ^ {-2 } 
+\end{gather*}
+
+\end{document}
