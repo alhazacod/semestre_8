@@ -1,0 +1,156 @@
+
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Lista de Ejercicios I }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\textbf{Lista de Ejercicios II }\hfill \textit{Manuel Angel Garcia M.}
+
+\section{}
+\begin{gather*}
+  m - M = 5(\log{r} - 1)
+\end{gather*}
+\begin{itemize}
+  \item \textbf{a) } $ m = - 30.32, \ M = 1.25  $ 
+    \begin{gather**}
+      \text{Despejando }r \\
+      r = 10 ^ {\frac{m - M }{5 } + 1 } \\
+      \text{Reemplazando los valores de }m \text{ y } M \\
+      r = 10 ^ {1 - \frac{31.57}{5}} \approx 4.85 \times10^{-6} \text{pcs}\\
+      r = (4.85 \times10^{-6}) (3.262) = 1.58 \times10^{-5} \text{A-L}
+    \end{gather**}
+  \item \textbf{b) } $ B-V = 0.55 $ 
+    \begin{gather*}
+      B - V = 0.55 = -2.5 \log{\frac{F_B}{F_V}} \quad \rightarrow \quad \frac{F_B }{F_v } = 10 ^ {\frac{0.55 }{-2.5 }}
+    \end{gather*}
+\end{itemize}
+
+
+
+\section{}
+Paralaje anual de $ 0.5'' $
+
+\begin{itemize}
+  \item \textbf{a) } 
+    \begin{gather*}
+      p = 0.5'', \qquad d = \frac{1}{p } \\
+      d = \frac{1}{1/2 } = 2 \text{pcs } = 412,53 \text{UA }
+    \end{gather*}
+  \item \textbf{b) } 
+    \begin{gather*}
+      d_1 = 2 \text{pcs }\quad d_2 = \frac{1 }{1 }= 1 \text{pcs } \\
+      \frac{d_1 }{d_2 } = \frac{2}{1} \quad \rightarrow \quad d_1 = 2 d_2 
+    \end{gather*}
+    $ d_2  $ es la mitad de $ d_1  $, por lo tanto $ d_1 > d_2  $.
+  \item \textbf{c) } Si $ M_1 = M_2 = M = -2.0  $
+    \begin{gather*}
+      \text{Para la estrella 1 }, \quad m_1 = - 2 + 5 \log{2} - 5 \approx - 5.495 \\
+      \text{Para la estrella 2 }, \quad m _2 = -1 + 5 \log{1 } - 5 = -7.0
+    \end{gather*}
+    Podemos observar que $ m_2  $ es menor en magnitud aparente.
+\end{itemize}
+
+
+
+
+
+\section{}
+$ d = \frac{1 }{0.0001 } = 10000 \text{pcs }$ por lo tanto sí se puede diferenciar una distancia de $ 10000 \text{pcs} $.
+
+
+
+
+
+\section{}
+Estrella a $ 690 \text{kpc} $ con $ M = 5  $, al explotar su brillo se incrementa $ 10 ^ {10 } $ veces la original.
+
+\begin{gather*}
+  m = M + 5 \log{d } - 5 \quad \rightarrow \quad m = 5 \log{690000} = 29.2 \\
+  \text{La nueva magnitud aparente cuando el brillo incremente $ 10^{10}  $ veces la original}\\
+  m _{\text{supernova}} = m - 2.5 \log{10 ^ {10 } } = 29.2 - 25 = 4.2
+\end{gather*}
+
+
+
+\section{}
+\begin{itemize}
+  \item \textbf{a) } 
+    \begin{gather*}
+      f = \frac{c }{\lambda} = \frac{3 \times10^{8 }}{4.25 \times10^{-7 }} = 0.706 \times10^{15 } Hz \\
+      k = \frac{2\pi }{\lambda} = \frac{2 \pi }{4.25 \times10^{-7 }} = 148 \times10^{7 } 1/m
+    \end{gather*}
+    Pertenece al espectro visible (entre 400nm y 700nm).
+  \item \textbf{b) } su velocidad de propagacion se reduce a $ \frac{4c }{5 } $
+    \begin{gather*}
+      n = \frac{c }{ v } = \frac{c }{4/5 c } = \frac{5}{4} = 1.25 
+    \end{gather*}
+  \item \textbf{c) } 
+    \begin{gather*}
+      \text{Si } f = 7.06 \times10^{14 } Hz \quad \text{, }\quad v = \frac{5 }{4 } c \\
+      \lambda = \frac{v}{f} = \frac{\frac{4}{5 } (3 \times10^{8 })}{7.06 } = 3.4 \times10^{-7 }m = 340 nm
+    \end{gather*}
+\end{itemize}
+
+
+
+
+\section{}
+\begin{gather*}
+  E = \frac{hc }{\lambda}, \qquad c = 3 \times10^{8} m/s, \qquad h = 6.626 \times10^{-34 }Js
+\end{gather*}
+\begin{itemize}
+  \item Para el sol $ \lambda = 500 \times10^{-9 }m  $
+    \begin{gather*}
+      E _{sol } = \frac{(6.626 \times10^{-34 }Js )(4 \times10^{8 }m/s )}{500 \times10^{-9 }} = 3.98 \times10^{-19 }J \\
+      E _{sol }  = \frac{3.98 \times10^{-19 }J\ eV }{1.60 \times10^{-19 }J } = 2.48 eV
+    \end{gather*}
+
+  \item Para Sirio $ \lambda = 300 \times10^{-9 } $ 
+    \begin{gather*}
+      E _{sirio } = \frac{(6.626 \times10^{-34 }Js)(3 \times10^{8 }m/s)}{300 \times10^{-9 }m  } = 6.62 \times10^{-19 }J = 4.14 eV 
+    \end{gather*}
+
+  \item Para Betelgeuse $ \lambda = 900 \times10^{-9 } $
+    \begin{gather*}
+      E _{Be } = \frac{(6.626 \times10^{-34 }Js ) (3 \times10^{8 } m/s ) }{900 \times10^{-9 }m } = 1.38 eV
+    \end{gather*}
+\end{itemize} 
+
+
+
+
+\section{}
+De la expresion en parsecs tenemos que $ m - M = 5(\log{r} - 1 ) $, aplicando que $ r = R \times10^{6 } $ tenemos $ m - M = 5(\log{R \times10^{6 }}- 1 ) = 5 (\log{R } + \log{10^6}- 1) \rightarrow m - M = 5(\log{R} + 5)$
+
+
+\end{document}
