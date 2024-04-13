@@ -1,0 +1,202 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\usepackage{mathbbol}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\title{Clase 11}
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Campos Sobre Variedades Curvas }
+
+\caja{black}{Apéndice A }{
+  \textbf{Observador Acelerado de Rindler }
+  De los principios de la teoria de la relatividad especial 
+  \begin{itemize}
+    \item Espacio de $ c $-vectores $ \mathcal M  $
+      \begin{gather*}
+        X \cdot X = - x ^ {0 } y ^ {0 } + x ^ {1 } y ^ {1 } + x ^ {2 }y ^ {2 } + x ^ {3 } y ^ {3 } =\eta _{\mu\nu} x ^ {\mu} x ^ {\nu} \qquad \text{para } X , Y \in \mathcal M   
+      \end{gather*}
+    \item Invariantes 
+      \begin{gather*}
+        \text{Con }\mathbb u, \mathbb a \in \mathcal M \quad \text{con } \mathbb u \text{ la c-velocidad y }\mathbb a \text{ es la c-aceleracion. }\\
+        \mathbb u\cdot \mathbb u = \mathbb u ^ {2 } = - c ^ {2 } \\
+        \mathbb a \cdot \mathbb u = 0 
+      \end{gather*}
+    \item 
+      \begin{gather*}
+        \mathbb u = \frac{d X(\tau ) }{d \tau } \qquad \qquad \mathbb u = \gamma(\vec u ) (c, \vec u ) \\
+        \text{Con }\\
+        \gamma(\vec u )= \frac{d t  }{d  \tau} = \frac{1}{\sqrt{1 - \frac{u ^2}{c ^2}} } \qquad \qquad \vec u = \frac{d \vec r (t) }{d t } \\
+        \mathbb u ^ {2 } = \eta _{\alpha\beta} u ^ {\alpha} u ^ {\beta} = (u ^ {0 }, u ^ {1 }, u ^ {2 }, u ^ {3 }) = (c\gamma, \gamma u_x, \gamma u_y, \gamma u_z)
+      \end{gather*}
+      Se llega a 
+      \begin{gather*}
+        \mathbb a = \frac{d \mathbb u  }{d \tau} = \gamma(\vec u ) \left(\frac{d \gamma(\vec u ) }{d t} c , \quad \frac{d \gamma(\vec u ) }{d t } \vec u + \gamma(\vec u ) \vec a \right) 
+      \end{gather*}
+  \end{itemize}
+}
+
+\textbf{Aceleración Propia: } 
+\begin{gather*}
+  \vec u = 0 \qquad \qquad \text{Instantanea }\\
+  \mathbb{a} = (0, \vec a)
+\end{gather*}
+\begin{gather*}
+  \mathbb a ^ {2 } = \eta _{\alpha\beta} a ^ {\alpha} a ^ {\beta} = \left|\vec a \right| ^ {2 } \qquad \qquad \mathbb a \in \mathcal M  
+\end{gather*}
+
+\textbf{Modelo: Observador de Ridler} $ \vec a = \vec g = cnst.  $
+
+\textbf{Trayectoria } 
+\begin{gather*}
+  \frac{d ^2 t  }{d \tau^2 } - g \frac{d x }{d \tau }= 0 \\
+  \frac{d ^2 x  }{d \tau } - g \frac{d  t  }{d \tau } = 0 \\
+  \text{Con soluciones particulares }\\
+  t = g ^ {-1 }\sinh{g\tau }\qquad \qquad x = g ^ {-1 } \cosh{g\tau}\\
+  x^2 - t^2 = g ^ {-2 }
+\end{gather*}
+Transformaciones 
+\begin{gather*}
+  t(\tau) = g ^ {-1 } \sinh{g\tau}\\ 
+  x(\tau) = g ^ {-1 } \cosh{g\tau} \\
+  y = y \\
+  z = z 
+\end{gather*}
+
+\begin{tikzpicture}
+\begin{axis}[
+legend pos=outer north east,
+axis lines = box,
+xlabel = $t$,
+ylabel = $x$,
+variable = t,
+trig format plots = rad,
+]
+\addplot [
+  domain=-4:4,
+  samples=200,
+  color=blue,
+  ]
+  {-(1+x^2)^(1/2)};
+\addlegendentry{$x^2 - t^2 = 1 $}
+
+\addplot [
+  domain=-4:4,
+  samples=200,
+  color=blue,
+  ]
+  {(1+x^2)^(1/2)};
+
+\end{axis}
+
+\end{tikzpicture}
+
+
+\caja{green}{}{
+  \begin{gather*}
+    t = a ^ {-1 } e ^ {a ^ {3 }} \sinh{a\eta}\\
+    x = a ^ {-1 } e ^ {a ^ {\xi }} \cosh{a\eta}
+  \end{gather*}
+  Donde 
+  \begin{gather*}
+    g:=  e ^ {-a \xi }\\
+    \tau:=  e ^ {a \xi }
+  \end{gather*}
+}
+
+\textbf{Metrica }
+\begin{gather*}
+  dS ^ {2 } = - dt ^ {2 } + dx ^ {2 } + dy ^ {2 } + dz ^ {2 } \\
+  \rightarrow dS ^ {2 } = - e ^ {2a \xi }d\eta ^ {2 } + e ^ {2a \xi } d \xi^2 + dy^2 + dz^2 
+\end{gather*}
+
+De las tranformaciones: 
+\begin{gather*}
+  \text{Si }\eta = cte \qquad \forall \quad \xi \\
+  t = a ^ {-1 } e ^ {a \xi } \sinh cte \\
+  x = a ^ {-1 } e ^ {a \xi } \cosh cte \\
+  \frac{t}{x} = \tanh{cte} = cte
+\end{gather*}
+
+\begin{tikzpicture}
+\begin{axis}[
+legend pos=outer north east,
+axis lines = box,
+xlabel = $t$,
+ylabel = $x$,
+variable = t,
+trig format plots = rad,
+]
+\addplot [
+  domain=-4:4,
+  samples=200,
+  color=blue,
+  ]
+  {(1+x^2)^(1/2)};
+\addlegendentry{$\xi = cte$}
+
+\addplot [
+  domain=0:2,
+  samples=200,
+  color=red,
+  ]
+  {2*x};
+\addlegendentry{$\eta = cte$}
+
+\addplot [
+  domain=-2:4,
+  samples=200,
+  color=black,
+  ]
+  {x};
+
+\addplot [
+  domain=-4:2,
+  samples=200,
+  color=black,
+  ]
+  {-x};
+
+\end{axis}
+
+\end{tikzpicture}
+
+Esto se puede ver como una "rejila" formada por el eje $ \eta  $ donde $ \xi = cte  $ y el eje $ \xi  $ donde $ \eta = cte  $. Aparece un nuevo tiempo $ \eta  $, el tiempo Miskowskiano.
+
+
+
+\end{document}
