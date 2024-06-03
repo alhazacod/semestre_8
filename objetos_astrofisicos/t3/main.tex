@@ -1,0 +1,145 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+
+\title{Lista de Ejercicios III}
+\author{Manuel Angel Garcia}
+
+\begin{document}
+
+\maketitle
+
+\section*{Ejercicio 1}
+
+Una línea espectral en el espectro de absorción de una estrella se observa con una longitud de onda aparente de 480 nm. Sin embargo, se sabe que esta línea tiene una longitud de onda original de 500 nm en observaciones previas.
+
+\begin{enumerate}
+    \item[a)] 
+      La estrella se está acercando a nosotros, ya que la longitud de onda aparente (480 nm) es menor que la longitud de onda original (500 nm). Esto indica un desplazamiento hacia el azul, que ocurre cuando el objeto se mueve hacia el observador.
+    
+    \item[b)] 
+      Utilizamos el efecto Doppler para calcular la velocidad:
+    \[
+    v = c \frac{\lambda_o - \lambda}{\lambda_o}
+    \]
+    donde \( \lambda_o = 500 \) nm es la longitud de onda original, \( \lambda = 480 \) nm es la longitud de onda observada, y \( c = 3 \times 10^5 \) km/s es la velocidad de la luz.
+    \[
+    v = 3 \times 10^5 \frac{500 - 480}{500} = 3 \times 10^5 \frac{20}{500} = 3 \times 10^5 \times 0.04 = 12000 \text{ km/s}
+    \]
+    La cual es teniendo el sistema de referencia inercial desde la estrella observada hacia la Tierra.
+    
+    \item[c)] 
+      Utilizamos la ley de Wien para estimar la temperatura:
+    \[
+    T = \frac{b}{\lambda_{\text{max}}}
+    \]
+    donde \( b = 2.898 \times 10^6 \) nm K es la constante de desplazamiento de Wien y \( \lambda_{\text{max}} = 500 \) nm.
+    \[
+    T = \frac{2.898 \times 10^6}{500} = 5796 \text{ K}
+    \]
+    La clase espectral correspondiente a esta temperatura es aproximadamente G.
+\end{enumerate}
+
+\section*{Ejercicio 2}
+
+\( H_0 = 71.9 \) km $\cdot$ s\(^{-1}\) $\cdot$ Mpc\(^{-1}\). Una galaxia distante observable se encuentra a una distancia de 18000 Mpc.
+
+\begin{enumerate}
+    \item[a)] 
+      Usamos la ley de Hubble:
+    \[
+    v = H_0 d
+    \]
+    donde \( d = 18000 \) Mpc y \( H_0 = 71.9 \) km $\cdot$ s\(^{-1}\) $\cdot$ Mpc\(^{-1}\).
+    \[
+    v = 71.9 \times 18000 = 1,294,200 \text{ km/s}
+    \]
+    El corrimiento al rojo se calcula con:
+    \[
+    z = \frac{v}{c}
+    \]
+    \[
+    z = \frac{1,294,200}{3 \times 10^5} \approx 4.31
+    \]
+    
+    \item[b)]
+      La velocidad ya fue calculada en la parte a):
+    \[
+    v = 1,294,200 \text{ km/s}
+    \]
+\end{enumerate}
+
+\section*{Ejercicio 3}
+
+a)
+Tenemos las siguientes longitudes de onda:
+
+\begin{align*}
+\text{Espectro A} & : \lambda_A = 510 \text{ nm} \\
+\text{Espectro B} & : \lambda_B = 545 \text{ nm} \\
+\text{Espectro C} & : \lambda_C = 483 \text{ nm} \\
+\end{align*}
+
+Los cambios aparentes en la longitud de onda en los espectros B y C respecto al espectro A son:
+
+\[
+\Delta \lambda_B = \lambda_B - \lambda_A = 545 \text{ nm} - 510 \text{ nm} = 35 \text{ nm}
+\]
+
+\[
+\Delta \lambda_C = \lambda_C - \lambda_A = 483 \text{ nm} - 510 \text{ nm} = -27 \text{ nm}
+\]
+
+b) 
+El corrimiento al rojo \( z \) se define como:
+
+\[
+z = \frac{\lambda_{\text{observada}} - \lambda_{\text{emitida}}}{\lambda_{\text{emitida}}}
+\]
+
+Para el espectro B:
+
+\[
+z_B = \frac{\lambda_B - \lambda_A}{\lambda_A} = \frac{545 \text{ nm} - 510 \text{ nm}}{510 \text{ nm}} = \frac{35 \text{ nm}}{510 \text{ nm}} \approx 0.0686
+\]
+
+Para el espectro C:
+
+\[
+z_C = \frac{\lambda_C - \lambda_A}{\lambda_A} = \frac{483 \text{ nm}}{510 \text{ nm}} - 1 = \frac{483 \text{ nm} - 510 \text{ nm}}{510 \text{ nm}} = \frac{-27 \text{ nm}}{510 \text{ nm}} \approx -0.0529
+\]
+
+Interpretación del corrimiento al rojo:
+- En el espectro B (\( z > 0 \)), la fuente se está alejando del observador.
+- En el espectro C (\( z < 0 \)), la fuente se está acercando al observador.
+
+c)
+La relación entre el corrimiento al rojo \( z \) y la velocidad \( v \) para velocidades mucho menores que la velocidad de la luz \( c \) es:
+
+\[
+v \approx zc
+\]
+
+Donde \( c \) es la velocidad de la luz, aproximadamente \(3 \times 10^8 \text{ m/s}\).
+
+Para el espectro B:
+
+\[
+v_B \approx 0.0686 \times 3 \times 10^8 \text{ m/s} \approx 2.06 \times 10^7 \text{ m/s} = 20,580 \text{ km/s}
+\]
+
+Para el espectro C:
+
+\[
+v_C \approx -0.0529 \times 3 \times 10^8 \text{ m/s} \approx -1.59 \times 10^7 \text{ m/s} = -15,870 \text{ km/s}
+\]
+
+Esto significa que:
+
+- En el espectro B, la fuente se está alejando a una velocidad de aproximadamente \(20,580 \text{ km/s}\).
+
+- En el espectro C, la fuente se está acercando a una velocidad de aproximadamente \(15,870 \text{ km/s}\).
+
+\end{document}
