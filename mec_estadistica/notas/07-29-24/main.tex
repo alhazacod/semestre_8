@@ -1,0 +1,82 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase Mecanica Estadistica }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Ensamble canónico para sistema económico }
+Dos cantidades conservada: 
+\begin{itemize}
+  \item $ N  $ : numero de agenes económicos 
+  
+  \item $ M  $: Cantidad de dinero total
+\end{itemize}
+El dinero promedio por agencia $ \frac{N}{M}  $ tambien es una cantidad conservada.
+
+Cada agente posee una cantidad de dinero ubicada en un rango $ m_1,m_2,\cdots,m_i  $.
+
+La cantidad de agentes se ecnuentra en un ranto $ n_1,n_2,\cdots,n_i  $.
+
+El número de configuraciones o arreglos estadísticos es $ W = \frac{N!}{n_!n_2!\cdots n_i! } $.
+
+$ N = \bar m N = cte  $
+
+$ T = \bar m  $ Dinero promedio por agente 
+
+No existe analogia con el volumen $ V  $
+
+$ M  $: dinero total se conserva 
+
+$ N  $ Numero de agentes se conserva 
+
+En estado de equilibrio el numero de configuraciones: $ W = W_{max } $
+\begin{gather*}
+  W_{max} = \frac{N! }{n_1!n_2! \cdots n_i!} 
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+Entropia de shannonn $ S^0  $ 
+\begin{gather*}
+  S^0 = \ln{W_{max }} = N \ln N - N \displaystyle\sum_{}^{} ...
+\end{gather*}
+
+Condiciones de ligadura 
+\begin{gather}
+  \displaystyle\int_{0 }^{\infty} p(m) dm = 1
+\end{gather}
+
+
+\end{document}

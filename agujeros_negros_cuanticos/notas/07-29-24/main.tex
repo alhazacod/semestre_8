@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase Agujeros Negros Cuanticos }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Campos sobre variedades curvas }
+
+\hfill
+
+\textbf{Metrica de Minkowski } $ ds^2 = -dt^2 + dx^2 + dy^2 + dz^2 \qquad  $ Global
+
+\textbf{Metrica de Riddler } $ ds ^2 = - e ^ {2 a \xi } d\eta^2 + e ^ {2 a \xi }d\xi^2 + dy^2 + dz^2  \qquad  $ Local  
+
+\textbf{Metrica de Kruskal }$ ds^2 = \frac{32M^3 }{r} e ^ {-\frac{r}{2M }}(-t\tau^2 + dz^2 ) + r^2(d\theta^2 + \sin^2{\theta}d\phi^2) \qquad $ 
+
+\textbf{Metrica de Swarzschild } $ ds^2 = - \left(1 - \frac{2M }{ r }\right)dt^2 + \left(1 - \frac{2M }{r }\right)dr^2 + r^2 \left(d\theta^2 + \sin^2{\theta }d\phi^2 \right) $
+
+Para dos observadores con la misma velocidad angular su relacion entre el sus tiempos es 
+\begin{gather*}
+  \frac{\Delta T_2 }{\Delta T_1 } = \sqrt{\frac{1 - \frac{2M }{r_2 }}{1 - \frac{2M }{r_1 }}}
+\end{gather*}
+\end{document}
