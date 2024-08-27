@@ -1,4 +1,4 @@
-PWD /home/alhazacod/Documents/uni/semestre_8/objetos_astrofisicos/proyecto_final/diapositivas
+PWD /home/alhazacod/Documents/semestre_8/objetos_astrofisicos/proyecto_final/diapositivas
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT main.tex
@@ -435,6 +435,13 @@ INPUT ./Logo-unal.png
 INPUT ./Logo-unal.png
 INPUT ./Logo-unal.png
 INPUT ./Logo-unal.png
+INPUT ./Logo-unal.png
+INPUT ./Logo-unal.png
+INPUT ./Logo-unal.png
+INPUT ./main.bbl
+INPUT ./main.bbl
+INPUT main.bbl
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmssi10.tfm
 INPUT ./Logo-unal.png
 INPUT ./Logo-unal.png
 INPUT ./Logo-unal.png

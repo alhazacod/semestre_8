@@ -1,0 +1,164 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase Agujeros Negros Cuánticos }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{}
+\begin{gather*}
+  \{\phi _{\Omega} ^ {(\epsilon)} \} \qquad \qquad \qquad \{\chi _{\Omega} ^ {(t)} \} \\
+  (\chi _{\Omega }  ^ {(\epsilon)}, \ \chi _{\Omega'} ^ {(\epsilon' )}) = \epsilon \epsilon (\omega) \delta _{\Omega \Omega' } \delta _{\epsilon\epsilon' } 
+\end{gather*}
+Los modos $ \phi _{\Omega} ^ {(\epsilon)} $ y $ \chi _{\Omega} ^ {(\epsilon)} $ están relacionados por una transformación de Bogoliubov. 
+
+\begin{gather*}
+   \chi _{\Omega} ^ {(\epsilon)}(x) = \phi _{\Omega} ^ {(\epsilon)}(x) \cosh \chi + \phi _{\Omega} ^ {(-\epsilon)}(x) \sinh \chi 
+\end{gather*}
+donde $ \chi  $ está expresada con base en $ \tanh \xi = e ^ {- \pi \left|\omega\right|/k_0 } $. Donde $ k_0  $ es la gravedad superficial. $ \chi _{\Omega} ^ {(\epsilon)} $ son los modos de Hatle-Hawking.
+\begin{gather*}
+  \chi _{\Omega } ^ {(\epsilon)} (x) = \displaystyle\sum_{}^{} a _{\Omega } \phi _{\Omega } ^ {(\epsilon)}(x)
+\end{gather*}
+\begin{gather*}
+  \chi _{\Omega }  ^ {(\epsilon)} = \sqrt{\frac{\sinh \chi \cosh \chi }{2 \left|\omega\right|}} \phi _{\Omega } (\vec x) e ^ {- i\omega t _{\epsilon(\omega) \epsilon}} 
+\end{gather*}
+
+\caja{blue}{Ejercicio 2}{
+  \begin{itemize}
+    \item[\textbf{a)}]  
+      Hallar 
+      \begin{gather*}
+        t _{\epsilon} = \left(t + \frac{1}{2} \frac{i\pi }{k_0}\right)\Theta _{\epsilon}  +  \left(t - \frac{1}{2} \frac{i\pi }{k_0}\right)\Theta _{-\epsilon}
+      \end{gather*}
+
+    \item[\textbf{b)}] 
+      \begin{gather*}
+        t _{\epsilon\epsilon' } = \left(t + \frac{1}{2} \frac{i\pi }{k_0 } \epsilon' \right)\Theta_\epsilon + \left(t - \frac{1}{2} \frac{i\pi }{k_0 }\epsilon'\right)\Theta _{-\epsilon} 
+      \end{gather*}
+  \end{itemize}
+}
+\caja{blue}{Ejercicio 3 }{
+  \begin{gather*}
+    e ^ {- i \omega t_\epsilon} = e ^ {-i \omega t } \left(e ^ {1/2 \frac{\pi \omega }{k_0 }}\Theta_\epsilon + e ^ {- 1/2 \frac{\pi \omega}{k_0 }}\Theta _{-\epsilon} \right) 
+  \end{gather*}
+}
+\caja{blue}{Ejercicio 4 }{
+  \begin{gather*}
+    e ^ {- i \omega t_{\epsilon\epsilon'}} = e ^ {-i \omega t } \left(e ^ {1/2 \frac{\pi \omega }{k_0 }\epsilon'}\Theta_\epsilon + e ^ {- 1/2 \frac{\pi \omega}{k_0 }\epsilon'}\Theta _{-\epsilon} \right) 
+  \end{gather*}
+}
+\caja{blue}{Ejercicio 5 }{
+  Sea $ \epsilon' = \epsilon(\omega) $, entonces 
+  \begin{gather*}
+    e ^ {- i \omega t \epsilon(\omega) \epsilon} = e ^ {- i \omega t }\left(e ^ {1/2 \frac{\pi \left|\omega\right|}{k_0}}\Theta_\epsilon + e ^ {-1/2 \frac{\pi \left|\omega\right|}{k_0}}\Theta_{-\epsilon}\right) 
+  \end{gather*}
+}
+\caja{blue}{Ejercicio 6 }{
+  Definiendo $ \chi = \chi(\omega) $ por $ \tanh \chi = e ^ {- \frac{\pi \left|\omega\right|}{k_0 }} $, lo demostrado en el ejercicio 5 se puede escribir como 
+  \begin{gather*}
+    e ^ {-i \omega t \epsilon(\omega) \epsilon } = e ^ {- i \omega t } \left[\left(\frac{\cosh \chi }{\sinh \chi }\right)^ {1/2 }\Theta_\epsilon + \left(\frac{\sinh \chi }{\cosh \chi }\right)^ {1/2 } \Theta _{-\epsilon} \right] 
+  \end{gather*}
+}
+\caja{blue}{Ejercicio 7 }{
+  Demostrar la expresión 
+  \begin{gather*}
+    \chi _{\Omega} ^ {(\epsilon)}(x) = \phi _{\Omega} ^ {(\epsilon)}(x) \cosh \chi + \phi _{\Omega} ^ {(-\epsilon)}(x) \sinh \chi 
+  \end{gather*}
+}
+\caja{blue}{Ejercicio 8 }{
+  Deducir la ecuación 
+  \begin{gather*}
+    \chi _{\Omega }  ^ {(\epsilon)} = \sqrt{\frac{\sinh \chi \cosh \chi }{2 \left|\omega\right|}} \phi _{\Omega } (\vec x) e ^ {- i\omega t _{\epsilon(\omega) \epsilon}} 
+  \end{gather*}
+}
+
+
+\caja{black}{Apéndice: Modos de frecuencia positiva}{  
+\begin{gather*}
+  \ln_\epsilon x = \ln \left|x \right| + \frac{i\pi }{2 } \epsilon(x) \epsilon 
+\end{gather*}
+}
+
+
+\caja{green}{Ayuda}{
+  \begin{gather*}
+    u = t - r_* \\
+    v = t + r_*\\
+    r_* = t = r + 2M \ln \left|\frac{r }{2M } - 1 \right| \\
+    \left|U \right| = e ^ {- \frac{u }{4M }} = e ^ {- k_0 u } \\
+    \left|V \right| = e ^ {\frac{v }{4M }} = e ^ {k_0 v }
+  \end{gather*}
+  Donde $ k_0 = \frac{1}{4M } $\\
+  De la transformación de $ u,v  $ podemos obtener que 
+  \begin{gather*}
+     t = \frac{u + v }{2 }
+  \end{gather*}
+  De la transformación de $ U,V  $ podemos obtener que
+  \begin{gather*}
+    \ln \left|U \right| = - k_0 u \qquad \rightarrow \qquad u = - \frac{1}{k_0 } \ln \left|U \right|\\ 
+    \ln \left|V \right| = - k_0 v \qquad \rightarrow \qquad v = \frac{1}{k_0 } \ln \left|V \right|
+  \end{gather*}
+  Juntando estas dos definiciones 
+  \begin{gather*}
+    t = \frac{1}{2k_0 }(\ln \left|V \right| - \ln \left|U \right|) \\
+    2k_0 t = \ln \left|\frac{V }{U }\right|
+  \end{gather*}
+  Reescribiendo 
+  \begin{gather*}
+    t = \frac{\ln \left|V \right|}{2k_0 } - \frac{\ln \left|U \right|}{2 k_0 } 
+  \end{gather*}
+  Usando que $ \ln_\epsilon x = \ln \left|x \right| + \frac{i\pi }{2 } \epsilon(x) \epsilon $\\
+  Para $ \epsilon= +  $
+  \begin{gather*}
+    \ln \left|V \right| = \ln_+ V  - \frac{i\pi }{2 } \epsilon(V) \qquad \qquad 
+    \ln \left|U \right| = \ln_+ U  - \frac{i\pi }{2 } \epsilon(U) \\
+  \end{gather*}
+  Entonces 
+  \begin{align*}
+    \frac{\ln \left|V \right|}{2k_0 } - \frac{\ln \left|U \right|}{2k_0 } &= \frac{1}{2k_0 }\left[\ln_+ V - \ln_+ U + \frac{i\pi }{2} \left(\epsilon(U) - \epsilon(V)\right)\right]\\ 
+     &= \frac{1}{2k_0 } \left[\ln \left|V \right|- \ln \left|U \right|\right] - \frac{i\pi }{2} \left(\frac{1}{2k_0 }\right) \left(\epsilon(U) - \epsilon(V) \right)\\
+     &= \frac{1}{2k_0 } \left[\ln_+ V - \ln_+ U \right]\\
+     &= t_+
+  \end{align*}
+  Haciendo el mismo procedimiento para $ \epsilon= -  $ 
+  \begin{gather*}
+    t_+ := \frac{1}{2k_0 } \left[\ln_+ V - \ln_+ U \right] \qquad \qquad t_- := \frac{1}{2k_0 } \left[\ln_- V - \ln_- U \right]\\
+    t_\epsilon = \frac{1}{2k_0 } \left[\ln_\epsilon V - \ln_\epsilon U \right]
+  \end{gather*}
+}
+
+
+
+
+
+
+\end{document}

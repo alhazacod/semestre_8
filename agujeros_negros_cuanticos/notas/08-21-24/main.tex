@@ -1,0 +1,102 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase Agujeros Negros Cuánticos }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{}
+\begin{gather*}
+  (\Box - m^2 ) \phi(x) = 0  
+\end{gather*}
+Métodos de Solución 
+\begin{gather*}
+  \phi^{(t)}_{\Omega} = \phi_\Omega(t,\vec x) \Theta_\epsilon 
+\end{gather*}
+Donde 
+\begin{gather*}
+  \phi_\Omega (t,\vec x ) = \phi_\Omega (r) Y _{lm } (\theta,\phi) \frac{1}{\sqrt{2 \left|\omega\right|} } e ^ {- i \omega t } 
+\end{gather*}
+Para $ r \rightarrow r_0 = 2M  $ 
+\begin{gather*}
+  \phi_\Omega ^ {\pm } (r) \approx  e ^ {\pm i \omega r_*} 
+\end{gather*}
+Con esto para $ +  $ tenemos 
+\begin{gather*}
+  \phi_\Omega \quad \rightarrow \quad \phi_\Omega ^ {+ } (t , \vec x) = Y _{lm }  (\theta, \phi) \frac{1}{\sqrt{2 \left|\omega\right|} } e ^ {- i \omega u }
+\end{gather*}
+Donde 
+\begin{gather*}
+  u \equiv t- r_* \\
+  v \equiv t + r_* 
+\end{gather*}
+En general 
+\begin{gather*}
+  \phi_\Omega ^+ (t, \vec x) = \phi_\Omega ^ {out }(r) Y _{lm } (\theta ,\phi) \frac{1}{\sqrt{2 \left|\omega\right|} } e ^ {- i \omega u } 
+\end{gather*}
+La cual tiende al caso particular cuando $ r \rightarrow r_0  $.
+
+Para -, tenemos 
+\begin{gather*}
+  \phi_\Omega^- (t, \vec x) = \phi_\Omega ^ {in }(r) Y _{lm } (\theta, \phi) \frac{1}{\sqrt{2 \left|\omega\right|} } e ^ {- i \omega v } 
+\end{gather*}
+Podemos reescribirlas como 
+\begin{gather*}
+  \phi_\Omega ^ {+ } (t,\vec x) = \phi_\Omega ^ {out } (u, \vec x) \qquad \qquad \phi_\Omega ^ {- } (t,\vec x) = \phi_\Omega ^ {in } (v, \vec x) 
+\end{gather*}
+Haciendo la transformación para 
+\begin{gather*}
+   U = T-Z \\
+   V = T+Z
+\end{gather*}
+Donde $ T,Z  $ son las coordenadas de Kruskal 
+\begin{gather*}
+  \phi_\Omega ^ {(\epsilon) } (U, \vec x ) = \Theta (- \epsilon U ) \phi_\Omega (u,\vec x)  \qquad \qquad 
+  \phi_\Omega ^ {(\epsilon) } (V, \vec x ) = \Theta (\epsilon V ) \phi_\Omega (u,\vec x)  
+\end{gather*}
+
+El conjunto $ \{\phi_\Omega ^ {(\epsilon)}\} $ es un conjunto de modos que satisfacen las relaciones de ortogonalidad con los productos escalares siguientes 
+\begin{gather*}
+  (\phi_\Omega ^ {(\epsilon)}, \phi_{\Omega'} ^ {(t')}) = \epsilon\ \epsilon (\omega) \delta _{\Omega \Omega' } \delta _{\epsilon\epsilon'}  
+\end{gather*}
+Donde 
+\begin{gather*}
+  \epsilon(\omega) = sign(\omega)  \\
+  \delta _{\Omega \Omega'} = \delta(\omega-\omega' ) \delta _{ll'} \delta _{mm'} \delta _{kk'}   \qquad \qquad ,\ k = \pm 1  
+\end{gather*}
+Ademas $ \{\phi_\Omega ^ {(\epsilon)}\} $ forma un conjunto completo \\
+Con respecto a la relación de ortogonalidad 
+\begin{gather*}
+  \displaystyle\int_{}^{}d^3 \vec x \ \ \gamma( \vec x) \phi _{\Omega' } ^* (\vec x ) = \delta _{\Omega \Omega '}  
+\end{gather*}
+
+\end{document}

@@ -1,7 +1,8 @@
 \beamer@sectionintoc {1}{Conceptos Preliminares}{3}{0}{1}
-\beamer@sectionintoc {2}{Metrica de Schwarzschild}{4}{0}{2}
-\beamer@subsectionintoc {2}{1}{Metrica de Minkowski}{4}{0}{2}
-\beamer@subsectionintoc {2}{2}{Simbolos de Christoffel y Tensor de Curvatura}{5}{0}{2}
-\beamer@subsectionintoc {2}{3}{Ecuacion de Campo de Einstein}{8}{0}{2}
+\beamer@sectionintoc {2}{Métrica de Schwarzschild}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Métrica de Minkowski}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Símbolos de Christoffel y Tensor de Curvatura}{5}{0}{2}
+\beamer@subsectionintoc {2}{3}{Ecuación de Campo de Einstein}{8}{0}{2}
 \beamer@sectionintoc {3}{Radio de Schwarzschild}{10}{0}{3}
-\beamer@sectionintoc {4}{Ecuacion de la Geodésica}{13}{0}{4}
+\beamer@sectionintoc {4}{Ecuación de la Geodésica}{13}{0}{4}
+\beamer@sectionintoc {5}{Referencias}{17}{0}{5}

@@ -6,8 +6,8 @@ from matplotlib.animation import FuncAnimation
 M = 1
 r_0 = 10
 u_dot_0 = 0
-#b = 60
-b = np.sqrt(27)*M
+b = 60
+#b = np.sqrt(27)*M
 
 # Define the differential equation
 def f(u, phi):

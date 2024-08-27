@@ -1,0 +1,171 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase Mecánica Estadística.}
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Función densidad de probabilidad para un sistema de $ N  $ partículas libres } 
+
+\hfill 
+
+Para un instante la energía cinética constante 
+\begin{gather*}
+  \epsilon_i(\vec r_i; \vec p_i ) = \frac{\vec p_1^2 }{2m } 
+\end{gather*}
+En el mismo instante se encuentra en un determinado estado microscópico con energía 
+\begin{gather*}
+  E(\vec r_1,\cdots, \vec r_N; \vec p_1 , \cdots, \vec p_N) = \displaystyle\sum_{i=1 }^{N } \epsilon_i (\vec r_i, \vec p_i ) = \displaystyle\sum_{i=1 }^{ N }  \frac{\vec p_i ^2 }{2m } 
+\end{gather*}
+Como las partículas del gas ideal son independientes 
+\begin{gather*}
+  \rho (\vec r_i; \vec p_i ) d\vec r_i d\vec p_i \qquad \qquad \text{Con } i = 1,2,\cdots,N 
+\end{gather*}
+La función densidad de probabilidad de estados del sistema de $ N  $ partículas libres, idénticas e indistinguibles satisface la condición de normalización 
+\begin{gather*}
+  \displaystyle\int_{}^{} \rho (\vec r_1, \cdots , \vec r_N; \vec p_1, \cdots, \vec p_N ) d \Lambda = N!  \\
+  \frac{1}{N! } \displaystyle\int_{}^{}d\vec r_1 d \cdots \vec r_N \displaystyle\int_{}^{}d\vec p_1 \cdots d\vec p_N \rho (\vec r_1, \vec p_1 ) \cdots \rho_N(\vec r_N, \vec p_N ) 
+\end{gather*}
+Entonces la función densidad de estados 
+\begin{gather*}
+  \rho_1(\vec r_1, \vec p_1 ) = \frac{1}{(N-1 )! } d\vec r_1 d \cdots \vec r_N \displaystyle\int_{}^{}d\vec p_1 \cdots d\vec p_N \rho (\vec r_1, \vec p_1 ) \cdots \rho_N(\vec r_N, \vec p_N ) 
+\end{gather*}
+Y satisface la condición de normalización 
+\begin{gather*}
+  \displaystyle\int_{}^{}d\vec r_1 \displaystyle\int_{}^{} d\vec p_1 (\vec r_1, \vec p_1 )  = N 
+\end{gather*}
+
+\section{Función distribución de velocidades de Maxwell }
+\begin{gather*}
+  \epsilon_1 (\vec r _1; \vec p_1 ) = \displaystyle\frac{\vec p_1^2}{ 2m } \\
+  \rho_1(\vec r_1, \vec p_1 ) = A e ^ {- \beta \epsilon(\vec r_1, \vec p_1 )}
+\end{gather*}
+Función densidad probabilidad 
+\begin{gather*}
+  \displaystyle\int_{}^{}d\vec r_1 \displaystyle\int_{}^{}d\vec p_1 \rho_1 (\vec r_1 , \vec p_1 ) = N = A \displaystyle\int_{}^{}d\vec r_1 \displaystyle\int_{}^{}d\vec p_1 e ^ {- \beta \epsilon(\vec r_1, \vec p_1 )}
+\end{gather*}
+Como $ \displaystyle\int_{}^{} d\vec r_1 = V  $
+\begin{gather*}
+  N = AV \displaystyle\int_{}^{}d\vec p_1 e ^ {- \beta \frac{p_1^2 }{2m }} 
+\end{gather*}
+Haciendo la integral encontramos que 
+\begin{gather*}
+  A = \frac{N }{V } \left(\frac{\beta}{2\pi m }\right)^ {3/2 }
+\end{gather*}
+Por lo tanto 
+\begin{gather*}
+  \rho_1 (\vec r_1, \vec p_1 ) = \frac{N}{V } \left(\frac{\beta}{2\pi m }\right)^ {3/2 } e ^ {- \beta \frac{p_1^2 }{2m }} \\
+  \eta = \frac{N}{V }
+\end{gather*}
+Luego la probabilidad de encontrar una partícula en un volumen $ d\vec r  $ alrededor del punto $ \vec r  $, normalizada a N, está dada por 
+\begin{gather*}
+  \eta(\vec r ) d\vec r \\
+  \eta (\vec r ) = \frac{N}{V }
+\end{gather*}
+
+Se tiene que cuando el sistema de encuentra en equilibrio, se cumple 
+\begin{gather*}
+  \rho(\vec r, \vec p) = \eta(\vec r) \phi (\vec p ) = \eta \phi(\vec p) \\
+  \phi(\vec p) = \left(\frac{\beta}{2\pi m }\right)^ {3/2 } e ^ {- \beta \frac{p^2 }{2m }}
+\end{gather*}
+La función de distribución del vector velocidad de una partícula no relativista $ \phi(\vec v )  $ se obtiene a partir de tener en cuenta que la probabilidad $ \phi(\vec v )d\vec v $ de encontrar una partícula dentro de un elemento de velocidad $ d\vec v  $ al rededor de $ \vec v  $ es igual a la probabilidad $ \phi(\vec p) d\vec p  $ de encontrar a la misma particula dentro de un elemento de momentum $ d\vec p  $ alrededor de $ \vec p  $. Es decir 
+\begin{gather*}
+  d\vec p = m^3 d\vec v \\
+  \phi(\vec v ) d\vec v = \phi(\vec p ) d\vec p = \phi(\vec p) m ^3 d\vec v 
+\end{gather*}
+De esta forma para el caso tridimensional 
+\begin{gather*}
+  \phi(\vec v ) = \phi(\vec p ) m^3 = \left(\frac{\beta m }{2\pi }\right)^ {3/2 } e ^ {- \beta m v^2 /2 } 
+\end{gather*}
+Y para una dimension 
+\begin{gather*}
+  \phi( v_x ) = \phi( p_x ) m = \left(\frac{\beta m }{2\pi }\right)^ {1/2 } e ^ {- \beta m v_x^2 /2 } 
+\end{gather*}
+
+Se tiene que la dependencia explicita de $ \phi(v_x)  $ con respecto a la temperatura es 
+\begin{gather*}
+  \phi(v_x ) = \left(\frac{m }{2\pi \kappa_B T }\right)^ {1/2 } e ^ {-m v_x^2/2\kappa_B T } 
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+Ahora nos enfocamos en determinar la función de distribución de magnitud de velocidades o función de distribución de velocidades de Maxwell $ f\left(v\right) $ con la cual es posible determinar la probabilidad $ f\left(v\right)dv  $, notemos que $ v  $ es la magnitud de $ \vec v  $.
+\begin{gather*}
+  f\left(v\right) dv = \displaystyle\int_{angulos }^{} \phi \left(\vec v \right)d\vec v = \displaystyle\int_{angulos }^{}\phi \left(\vec v \right) dv \sin{\theta}d\theta d\phi \\
+  f\left(v\right) = 4\pi \left(\frac{m }{2\pi \kappa_B T }\right)^ {3/2 } v^2 e ^ {-m v^2 / 2 \kappa_B T }
+\end{gather*}
+Velocidad cuadrática media para $ x  $ 
+\begin{gather*}
+  \bar{v_x^2 } = \int\int\int v_x^2 f\left(v_x\right)dv_xdv_ydv_z = \frac{1}{\beta m }
+\end{gather*}
+O bien 
+\begin{gather*}
+  \frac{1}{2} m \bar{v_x^2 } = \frac{1}{2} \kappa_B T 
+\end{gather*}
+Realizando el procedimiento para $ x,y  $ se encuentra 
+\begin{gather*}
+  \frac{1}{2}m \bar{v^2 } = \frac{1}{2}(\bar{v_x^2 } + \bar{v_y^2 } + \bar{v_z^2 }) = \frac{3 }{2} \kappa_B T 
+\end{gather*}
+
+La velocidad mas probable se encuentra en el máximo de $ f(v)  $ 
+\begin{gather*}
+  v_{mp}^2 = \frac{2\kappa_B T }{m } = \frac{2RT }{M }
+\end{gather*}
+Donde M es el peso molecular $ M = N_A m  $ donde $ N_A = 6.02 \times 23  $
+
+La velocidad promedio de una partícula 
+\begin{gather}
+  \bar v = \int_{0 }^{\infty} v f\left(v\right)dv = \sqrt{\frac{8}{\pi }} \sqrt{\frac{RT }{M }} 
+\end{gather}
+La raíz cuadrada de la velocidad cuadrática media $ v _{rms }  $ se puede estimar como 
+\begin{gather*}
+  v _{rms } = \sqrt{\bar v_2 } = \sqrt{3 } \sqrt{\frac{RT }{M }}  
+\end{gather*}
+
+La presión va a estar dada por 
+\begin{gather*}
+  \bar P = \frac{2 }{A\Delta t } \displaystyle\int_{-\infty}^{\infty} dp_x \displaystyle\int_{-\infty}^{\infty} dp_y \displaystyle\int_{-\infty}^{\infty} dp_z = \displaystyle\int_{V }^{} d\vec r \left|p_z \right| \rho(\vec r, \vec p ) 
+\end{gather*}
+Con $ V = A \frac{\left|p_x \right|}{m }\Delta t  $ 
+\begin{gather*}
+  \bar P = \frac{2 }{A\Delta t } \displaystyle\int_{-\infty}^{\infty} dp_x \displaystyle\int_{-\infty}^{\infty} dp_y \displaystyle\int_{-\infty}^{\infty} dp_z = \displaystyle\int_{-\infty  }^{\infty} d\vec r \left|p_z \right| V \rho(\vec r, \vec p ) = \frac{N\kappa_B T }{V }
+\end{gather*}
+Por lo tanto nos conduce a la ecuación de estado de los gases ideales.
+\begin{gather*}
+  PV = N \kappa_B T  
+\end{gather*}
+
+
+
+\end{document}

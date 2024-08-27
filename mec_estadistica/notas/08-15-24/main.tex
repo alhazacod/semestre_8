@@ -1,0 +1,140 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase Mecánica Estadística }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Observables termodinámicos en el ensamble gran-canónico}
+Se obtuvo que la probabilidad de que el sistema termodinámico de interés, en un instante dado de tiempo, se encuentre teniendo $ N  $ partículas en el estado $ \ket{\Phi_j } $ con energía $ E_j  $ es 
+\begin{gather*}
+  p _{Nj } = \frac{e ^ {-\beta E_j - \gamma N }}{Z_N } 
+\end{gather*}
+Donde la función de gran partición 
+\begin{gather*}
+  Z_N = Z(T,V,N) = \displaystyle\sum_{N }^{}\displaystyle\sum_{j }^{} e ^ {-\beta E_j - \gamma N } = \displaystyle\sum_{N }^{} \lambda^N Q_N  
+\end{gather*}
+Con fugacidad $ \lambda  $
+\begin{gather*}
+  \lambda = e ^ {-\gamma } 
+\end{gather*}
+Y el multiplicador de Lagrange 
+\begin{gather*}
+  \gamma = - \beta\mu 
+\end{gather*}
+con $ \beta = \frac{1}{\kappa_B T } $ y $ Q_N  $ la función de partición canónica del sistema de $ N  $ partículas dada por 
+\begin{gather*}
+  Q_N = Q(T,V,N) = \displaystyle\sum_{j }^{} e ^ {- \beta E_j } 
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+Los observables termodinámicos energía interna $ E  $ y numero de matriculas $ N  $
+\begin{gather*}
+   \expval{E } = \frac{\sum_{N }^{} \sum_{j }^{} E_j e ^ {-\beta E_j - \gamma N }}{\sum_{N }^{} \sum_{j }^{} e ^ {-\beta E_j - \gamma N }} = - \frac{\partial  }{\partial \beta } \left[\ln \displaystyle\sum_{N }^{} \displaystyle\sum_{j }^{} e ^ {-\beta E_j - \gamma N }\right] 
+   \\
+   \expval{N } = \frac{\sum_{N }^{} \sum_{j }^{} N e ^ {-\beta E_j - \gamma N }}{\sum_{N }^{} \sum_{j }^{} e ^ {-\beta E_j - \gamma N }} = - \frac{\partial  }{\partial \gamma } \left[\ln \displaystyle\sum_{N }^{} \displaystyle\sum_{j }^{} e ^ {-\beta E_j - \gamma N }\right]
+\end{gather*}
+En general, un observable termodinámico cualquiera $ \mathcal O  $ queda definido como el promedio estadístico del observable $ \expval{\mathcal O } $ en el ensamble gran-canónico, es decir 
+\begin{gather*}
+  \expval{\mathcal O } 
+  = \frac{1}{Z_N } \displaystyle\sum_{N }^{} \displaystyle\sum_{j }^{} \mathcal O \lambda^N e ^ {- \beta E_j } 
+  = \frac{1}{Z_N } \displaystyle\sum_{N }^{} \lambda^N \expval{\mathcal O }_N Q_N  
+\end{gather*}
+Con 
+\begin{gather*}
+  \expval{\mathcal O } 
+  = \frac{Q_N }{2} \displaystyle\sum_{j }^{} \mathcal O e ^ {- \beta E_j } 
+\end{gather*}
+
+
+
+
+
+
+\section{Operador matriz densidad de probabilidad del ensamble gran-canónico }
+El operador matriz densidad de probabilidad del ensamble gran-canónico está definido a partir de los elementos de matriz 
+\begin{gather*}
+  \rho _{ij }  = \delta _{lj }  e ^ {-\beta E_j + \beta_\mu N } 
+\end{gather*}
+De forma equivalente el operador matriz densidad de probabilidad queda definido como 
+\begin{gather*}
+  \hat \rho = \displaystyle\sum_{N }^{} \displaystyle\sum_{j }^{} \ket{\Phi_j^N } e ^ {- \beta E_j + \beta N_\mu } \bra{\Phi_j ^N } = e ^ {-\beta\hat H + \beta_\mu \hat N } \displaystyle\sum_{N }^{} \displaystyle\sum_{j }^{} \ket{\Phi_j^N } \bra{\Phi_j^N} 
+\end{gather*}
+Tal que se satisface que 
+\begin{gather*}
+   \displaystyle\sum_{N }^{} \displaystyle\sum_{k }^{} \ket{\Phi_k^N } \bra{\Phi_k^N} = 1
+\end{gather*}
+Por cual el \textbf{operador matriz densidad e probabilidad del ensamble gran-canónico } es  
+\begin{gather*}
+  \hat \rho = e ^ {-\beta\hat H + \beta_\mu \hat N } 
+\end{gather*}
+De tal forma que en el sistema hay $ m  $ especies de partículas 
+\begin{gather*}
+  \mu\hat N = \displaystyle\sum_{l= 1 }^{m } \mu_l \hat n _l  
+\end{gather*}
+En general se cumple que 
+\begin{gather*}
+  \left[ \hat{N} , \hat H   \right] = 0 \qquad \qquad \left[ \hat N_l  , \hat H   \right] = 0 \qquad \qquad \left[ \hat N_l  , \hat N_k   \right] = 0  
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+La función de gran partición se puede escribir en termino de $ \hat \rho  $ 
+\begin{gather*}
+  Z(T,V,N) = \Tr \hat \rho  = \displaystyle\sum_{N }^{} \displaystyle\sum_{j }^{} e ^ {- \beta E_j + \beta_\mu N  } 
+\end{gather*}
+así, el promedio estadístico de un observable $ \mathcal O  $ 
+\begin{gather*}
+  \expval{\mathcal O } = \frac{\Tr \left[\hat{\rho} \hat{\mathcal{O}} \right]}{\Tr \left[\hat \rho \right]}
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\begin{gather*}
+  N_l = \kappa_B T \frac{\partial \ln Z_N  }{\partial \mu_l } = \kappa_B T \frac{\partial \ln Z_{N_l } }{\partial \mu_l } 
+\end{gather*} 
+
+
+
+
+
+\section{}
+
+
+\end{document}

@@ -1,0 +1,127 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase Mecánica Estadística }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Relación entre $ Q_N  $ y $ Q_1  $ para sistema de partículas independientes distinguibles e indistinguibles } 
+\begin{gather*}
+  Q(T,V,N) = \frac{1}{N!} [Q(T,V,1 )] ^N
+\end{gather*}
+
+Teniendo en cuenta la definición estadística de la energía de Helmholtz $ A = -\kappa _{B } T \ln{Q_N } $ y la identidad termodinámica que la relaciona con el potencial químico, se tiene que: 
+\begin{gather*}
+  \mu = \frac{\partial A  }{\partial N } = \frac{\partial  }{\partial N }(- \kappa _{B } T \ln{Q_N }) = - \frac{1}{\beta} \ln{\frac{Q_1 }{N }} 
+\end{gather*}
+
+Por lo tanto el potencial químico está definido como 
+\begin{gather*}
+  \mu \equiv - \kappa_B T \ln{\frac{Q_1 }{N}} 
+\end{gather*}
+
+\section{Gas ideal de partículas idénticas e indistinguibles: Aproximación semi clásica }
+\begin{gather*}
+  Q_1 = \displaystyle\int_{0 }^{\infty} e ^ {\beta_\epsilon} D(\epsilon) d\epsilon 
+\end{gather*}
+Consideremos una de las partículas del gas ideal. Dado que las partículas del gas ideal son libres, la energía de la panícula es lamente energía cinética. Si las partículas tienen masa $ m  $, la energía cinética: 
+\begin{gather*}
+  \epsilon = \frac{p^2 }{2m } = \frac{1}{2m }(p_x^2+ p_y^2 + p_z^2 )
+\end{gather*}
+Los niveles cuantizados: 
+\begin{gather*}
+  \epsilon _{i_x, i_y,i_z } = \frac{1}{2m } \left(\frac{h }{2L }\right)^2 (i_x^2 + i_y^2 + i_z^2 )
+\end{gather*}
+Puesto que se asume que el contenedor es un cubo 
+\begin{gather*}
+  V = L^3 \\
+  \epsilon_i = \frac{h^2 }{8m } \frac{1}{V ^ {2/3 }}(i_x^2 + i_y^2 + i_z^2)
+\end{gather*}
+Tomando $ i = \sqrt{i_x^2 + i_y^2+ i_z^2}  $ 
+\begin{gather*}
+  \epsilon_i =  \frac{h^2 }{8m } \frac{1}{V ^ {2/3 }} i^2 \\
+  i = \left(\frac{8m v ^ {2/3 }}{h^2 }\right) ^ {1/2 } e ^ {1/2 }\\
+  di = \left(\frac{8m v ^ {2/3 }}{h^2 }\right) ^ {1/2 } \frac{1}{2} e ^ {-1/2 } d \epsilon
+\end{gather*}
+\begin{gather}
+  \displaystyle\sum_{i }^{ } A(\epsilon_i ) = \displaystyle\int_{}^{} A(\epsilon) \frac{1}{2} \pi i^2 di = \displaystyle\int_{}^{} A(\epsilon) \frac{2\pi(2m)^ {2/3 } }{h^3 } V \epsilon ^ {1/2 } d\epsilon = \displaystyle\int_{}^{}A(\epsilon) D(\epsilon) d\epsilon
+\end{gather}
+Donde $ D(\epsilon)  $ representa la densidad de estados de partícula simple.
+\begin{gather}
+  D(\epsilon) = \frac{2\pi (2m)^ {2/3 }}{h^3 }V \epsilon ^ {1/2 }
+\end{gather}
+El gas ideal se considera monotónico por lo que la función de partición en el continuo escrita en la aproximación semiclásica es 
+\begin{gather}
+  Q(T,V,1) = \frac{(2\pi m \kappa_B T)^ {2/3 }}{h^3 } V 
+\end{gather}
+La energía cinética promedio de una partícula del gas ideal está dada por 
+\begin{gather*}
+  \bar \epsilon = \frac{3 }{2} \kappa_B T = \frac{\bar p^2 }{2m } 
+\end{gather*}
+Donde el momento promedio 
+\begin{gather*}
+  \bar p = \sqrt{2m \bar \epsilon}  = \sqrt{3m\kappa_B T } 
+\end{gather*}
+Definimos la longitud de onda de Brig lie térmica $ \bar \lambda $ 
+\begin{gather*}
+  \bar \lambda = \frac{h }{p } = \frac{h }{\sqrt{2\pi m \kappa_B T } } 
+\end{gather*}
+
+La función de partición del gas ideal de $ N  $ partículas idénticas 
+\begin{gather}
+  Q(T,V,N) = \frac{1}{N! } \left(\frac{V }{\bar \lambda^3 }\right)^N 
+\end{gather}
+
+Tomando el logaritmo 
+\begin{gather}
+  \ln{Q(T,V,N)  } = N \ln{V} + \frac{3 }{2} N \ln{T} + cte
+\end{gather}
+
+\hfill 
+
+La energía interna del gas ideal se expresa como 
+\begin{gather*}
+  R = \kappa_B \frac{\partial \ln(Q_N)  }{\partial T} = \frac{3}{2} N\kappa_B T  
+\end{gather*}
+La presión ejercida por el gas ideal sobre las paredes del contenedor es 
+\begin{gather*}
+  P = \frac{N}{V } \kappa_B T  
+\end{gather*}
+
+La entropía 
+\begin{gather*}
+  S = \frac{\expval{E }}{T } + \kappa_B \ln{Q_N   } 
+  = \kappa_B \left[\frac{3}{2} N + \ln\frac{\left(\frac{V}{\bar \lambda^3 }\right)}{N! }\right] 
+  = \kappa_B T \ln\frac{\left(\frac{V}{\bar \lambda^3 }\right)}{N! }
+\end{gather*}
+
+\end{document}

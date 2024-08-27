@@ -1,5 +1,13 @@
 # Fdb version 4
-["pdflatex"] 1722714785.90687 "main.tex" "main.pdf" "main" 1722714788.39035 0
+["bibtex main"] 1722874328.55131 "main.aux" "main.bbl" "main" 1722874432.50802 0
+  "./ref.bib" 1722873254.03015 594 bdd8012f771cdf55312903441d1cfd05 ""
+  "/usr/share/texmf-dist/bibtex/bst/base/ieeetr.bst" 1716849630 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
+  "main.aux" 1722874431.91668 5162 d00becd3da9a1fa726f698cf86967aa4 "pdflatex"
+  (generated)
+  "main.bbl"
+  "main.blg"
+  (rewritten before read)
+["pdflatex"] 1722874428.37598 "main.tex" "main.pdf" "main" 1722874432.5084 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1716849630 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1716849630 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1716849630 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -18,6 +26,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmss12.tfm" 1716849630 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmss8.tfm" 1716849630 1296 d77f431d10d47c8ea2cc18cf45346274 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm" 1716849630 1272 e2d13f0df30bf3ad990bb9d028e37f34 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmssi10.tfm" 1716849630 1520 ca2bb4b78ac9800bd686e30c6d19ef95 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1716849630 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1716849630 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1716849630 1120 8b7d695260f3cff42e636090a8002094 ""
@@ -200,17 +209,18 @@
   "/usr/share/texmf-dist/tex/latex/url/url.sty" 1716849630 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1716849630 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1716849630 41588 b43d3e860a4f94167ee1e725ff526a72 ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1717044389.56165 5312047 b07fcd2a9090df96fc745b92a3db793b ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1717044329 7112985 d78657384fbaaa73c5c8e95a5bc6f108 ""
-  "Logo-unal.png" 1722712398.04616 18848 424a6dcec604d57fdfac8bb1b4ea2c35 ""
-  "geodesicas.png" 1722714523.98157 57710 c4920e938923d813c674e552bdb3f76a ""
-  "main.aux" 1722714788.23236 4510 3ba9e37afafb57190aa337c390f9f39c "pdflatex"
-  "main.nav" 1722714788.2357 2772 95359dd3649fbf491692d9c51fbb2646 "pdflatex"
-  "main.out" 1722714788.23236 1336 48b7747b06acc3f5cc1efc3bf2d4c942 "pdflatex"
-  "main.tex" 1722714785.5592 11325 b6ffc5aa836966ae591db17be7536d84 ""
-  "main.toc" 1722714788.2357 459 f4adb42b541e4ea906946022cd14a78d "pdflatex"
-  "sage.png" 1722712398.11616 41154 fdbbad71e7a935bb7fe9383a551cd5c8 ""
-  "tensor.png" 1722714489.24736 64116 03cee797ca49a4368d0d1d402ed74a36 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1721665235.58673 5312047 b07fcd2a9090df96fc745b92a3db793b ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1721838899 7135089 2d7509f3ac03aad810dfa3fc1d3abacb ""
+  "Logo-unal.png" 1722869583.83667 18848 424a6dcec604d57fdfac8bb1b4ea2c35 ""
+  "geodesicas.png" 1722869583.84 57710 c4920e938923d813c674e552bdb3f76a ""
+  "main.aux" 1722874431.91668 5162 d00becd3da9a1fa726f698cf86967aa4 "pdflatex"
+  "main.bbl" 1722874328.69334 357 210f894ee68cf86a6adf6e41859cf50a "bibtex main"
+  "main.nav" 1722874431.92001 3028 8fdad279f230d4435dd229f626aa6b0f "pdflatex"
+  "main.out" 1722874431.92001 1449 5869d9cbbf656ac2c8390f59bf64c1b4 "pdflatex"
+  "main.tex" 1722874427.92335 11561 cc3b249f860dc864d57d76499d3e85a2 ""
+  "main.toc" 1722874431.92001 512 1de9c267b3f4a130ee658d5ff310fa35 "pdflatex"
+  "sage.png" 1722869583.84667 41154 fdbbad71e7a935bb7fe9383a551cd5c8 ""
+  "tensor.png" 1722869583.85 64116 03cee797ca49a4368d0d1d402ed74a36 ""
   (generated)
   "main.aux"
   "main.log"

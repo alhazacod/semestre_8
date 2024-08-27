@@ -6,21 +6,22 @@
 \usecolortheme{default}
 
 %Information to be included in the title page:
-\title[Geodesica en Espacio de Minkowski] %optional
+\title[Geodésica en Espacio de Minkowski] %optional
 {Geodésica Alrededor de una Partícula con la Métrica de Schwarzschild}
 
-\author[Garcia, Raisuke] % (optional, for multiple authors)
-{Manuel Angel Garcia\inst{1} \and Carlos Andres Llanos\inst{1}}
+\author[Garcia, Llanos] % (optional, for multiple authors)
+{Manuel Angel Garcia\inst{1} \and Carlos Andres Llanos\inst{2}}
 
 \institute[] % (optional)
 {
-  \inst{1}%
   Facultad de Física\\
-  Universidad Nacional de Colombia
+  Universidad Nacional de Colombia \\
+  \inst{1} mangarciama@unal.edu.co, \inst{2} cllanos@unal.edu.co
 }
 
-\date[2023] % (optional)
-{Clase de Métodos Geométricos}
+
+\date[2024] % (optional)
+{Clase de Objetos Astrofísicos }
 
 \logo{\includegraphics[height=1cm]{Logo-unal}}
 
@@ -44,7 +45,7 @@
     \includegraphics[width=0.45\textwidth]{tensor.png}
   \end{figure}
   
-  \textbf{Geodesica }
+  \textbf{Geodésica }
   \begin{figure}
     \includegraphics[width=0.45\textwidth]{geodesicas.png}
   \end{figure}
@@ -54,8 +55,8 @@
 
 \begin{frame}
 \frametitle{Métrica de Schwarzschild}
-\section{Metrica de Schwarzschild}
-\subsection{Metrica de Minkowski}
+\section{Métrica de Schwarzschild}
+\subsection{Métrica de Minkowski}
 
 Partiendo de la métrica de Minkowski en esféricas: 
 \begin{gather*}
@@ -67,7 +68,7 @@ Necesitamos una métrica que mantenga la forma del ángulo solido, así que pode
   ds^2 = - e ^ {2 \alpha (r) } dt^2 + e ^ {2 \beta(r) } dr^2 + e ^ {2\gamma(r)}r^2 d \Omega^2 
 \end{gather*}
 
-Vamos a imponer que la metrica sea simetrica en sus componentes angulares por lo que la podemos reescribir como:
+Vamos a imponer que la métrica sea simétrica en sus componentes angulares por lo que la podemos reescribir como:
 
 \begin{gather*}
   ds^2 = - e ^ {2\alpha(r)}dt^2 + e ^ {2 \beta (r) } dr^2 + r^2 d \Omega^2  
@@ -81,12 +82,12 @@ Vamos a imponer que la metrica sea simetrica en sus componentes angulares por lo
 
 \begin{frame}
 \frametitle{Métrica de Schwarzschild}
-\subsection{Simbolos de Christoffel y Tensor de Curvatura}
+\subsection{Símbolos de Christoffel y Tensor de Curvatura}
 
 \begin{gather*}
   ds^2 = - e ^ {2\alpha(r)}dt^2 + e ^ {2 \beta (r) } dr^2 + r^2 d \Omega^2  
 \end{gather*}
-Calculamos los simbolos de Christoffel:
+Calculamos los símbolos de Christoffel:
 \begin{align*}
   &\Gamma_{t r}^t=\partial _r \alpha \qquad &&\Gamma_{t t}^r=e^{2(\alpha-\beta)} \partial_r \alpha \qquad &&&\Gamma_{r r}^{r}=\partial_r \beta \\
   &\Gamma_{r \theta}^\theta=\frac{1}{r} \qquad &&\Gamma_{\theta \theta}^r=-r e^{-2 \beta} \qquad &&&\Gamma_{r \phi}^\phi=\frac{1}{r} \\
@@ -99,9 +100,9 @@ Calculamos los simbolos de Christoffel:
 
 
 \begin{frame}
-\frametitle{Metrica de Schwarzschild}
+\frametitle{Métrica de Schwarzschild}
 
-Con los simbolos de Christoffel podemos obtener el tensor de Riemann: 
+Con los símbolos de Christoffel podemos obtener el tensor de Riemann: 
 
 \begin{align*}
   &R_{r t r}^{t}=\partial_r \alpha \partial_r \beta-\partial_r^2 \alpha-(\partial_r \alpha)^2 \\
@@ -120,7 +121,7 @@ Con los simbolos de Christoffel podemos obtener el tensor de Riemann:
 
 
 \begin{frame}
-\frametitle{Metrica de Schwarzschild}
+\frametitle{Métrica de Schwarzschild}
 
 Tomando la contracción obtenemos el tensor de Ricci: 
 
@@ -139,9 +140,9 @@ Tomando la contracción obtenemos el tensor de Ricci:
 
 \begin{frame}
 \frametitle{Métrica de Schwarzschild}
-\subsection{Ecuacion de Campo de Einstein}
+\subsection{Ecuación de Campo de Einstein}
 
-Reemplazamos el tensor de Ricci en la ecuacion de campo de Einstein en el vacío y contrayendo con la métrica contravariante para hallar $ \alpha  $ y $ \beta  $: 
+Reemplazamos el tensor de Ricci en la ecuación de campo de Einstein en el vacío y contrayendo con la métrica contravariante para hallar $ \alpha  $ y $ \beta  $: 
 \begin{gather*}
   R _{\mu \nu }  - \frac{1}{2} R g _{\mu \nu }  = 0  
 \end{gather*}
@@ -159,7 +160,7 @@ Para que se cumpla esta ecuación necesitamos que $ \alpha = - \beta + c  $
 
 
 \begin{frame}
-\frametitle{Metrica de Schwarzschild}
+\frametitle{Métrica de Schwarzschild}
 
 \begin{gather*}
   \alpha = - \beta  
@@ -194,7 +195,8 @@ Como vamos a tratar el caso no relativista tenemos que $ \frac{d x ^ {i } }{d \t
 \begin{gather*}
   \frac{d ^2 x ^ {\mu } }{d \tau^2 } + \Gamma _{tt } ^ {\mu } \left(\frac{d t  }{d \tau }\right)^2 = 0  
 \end{gather*}
-Como el campo es estático ($ \partial _0 g _{\mu \nu }  $), $ \Gamma _{tt } ^ {\mu } $ se simplifica como: 
+Como el campo es estático ($ \partial _0 g _{\mu \nu } = 0 $), $ \Gamma _{tt } ^ {\mu } $ se simplifica como: 
+
 \begin{align*}
   \Gamma _{tt } ^ {\mu } &= \frac{1}{2} g ^ {\mu \lambda} (\partial_t g _{\lambda t } + \partial_t g _{t \lambda} - \partial_\lambda g _{tt }  ) \\
     &= - \frac{1}{2} g ^ {\mu\lambda} g ^{\mu\lambda} \partial_\lambda g _{tt} 
@@ -219,7 +221,7 @@ Reemplazando en el símbolo de Christoffel, la métrica nos queda:
   \Gamma _{tt } ^ {\mu} = - \frac{1}{2} \eta ^ {\mu\lambda} \partial _{\lambda} h _{tt } \quad \Longrightarrow \quad \frac{d ^2 x ^ {\mu} }{d \tau^2 } = \frac{1}{2} \eta ^ {\mu\lambda} \partial_\lambda h _{tt } \left(\frac{d t  }{d \tau }\right)^2  \\
   \rotatebox[origin=c]{180}{$\Lsh$} \frac{d ^2 x ^ {\mu} }{d t^2 } = \frac{1}{2} \partial _{i }  h _{tt } 
 \end{gather*}
-Recordemos que para un potencial gravitacional $ \vec a = -\nabla  \phi $
+Recordemos que para un potencial gravitational $ \vec a = -\nabla  \phi $
 \end{frame}
 
 
@@ -231,7 +233,7 @@ Recordemos que para un potencial gravitacional $ \vec a = -\nabla  \phi $
 \begin{gather*}
 \frac{d ^2 x ^ {\mu} }{d t^2 } = \frac{1}{2} \partial _{i }  h _{tt }
 \end{gather*}
-Recordemos que para un potencial gravitacional $ \vec a = -\nabla  \phi $, comparando con la ecuación anterior: 
+Recordemos que para un potencial gravitational $ \vec a = -\nabla  \phi $, comparando con la ecuación anterior: 
 \begin{gather*}
   h _{tt } = -2\phi 
 \end{gather*}
@@ -247,7 +249,7 @@ Como $ g _{tt } = \eta _{tt } + h _{tt }  $ y del potencial Newtoniano para un c
 
 \begin{frame}
 \frametitle{Geodésicas de Schwarzschild}
-\section{Ecuacion de la Geodésica}
+\section{Ecuación de la Geodésica}
 
 \begin{gather*}
   ds^2 = - \left(1 - \frac{2GM }{r }\right)dt^2 + \left(1 - \frac{2GM }{r}\right) ^ {-1 } dr^2 + r^2 d \Omega^2  
@@ -305,4 +307,15 @@ Haciendo el reemplazo $ u = \frac{1}{r} $ nos queda:
 A $ b  $ se le conoce como parámetro de impacto y nos determina la forma de la orbita. $ b = \sqrt{27 } M  \rightarrow $ orbitas de circunferencia inestable. $ b < \sqrt{27 } M  $ orbitas de caída en el centro.
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+  \section{Referencias}
+  \nocite{*}
+
+  \bibliographystyle{ieeetr}
+  \bibliography{ref}
+\end{frame}
 \end{document}
