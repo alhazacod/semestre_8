@@ -1,0 +1,90 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase Mecánica Estadística }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Gas de Fermiones }
+Función de Fermi 
+\begin{gather*}
+  F(\epsilon) = \frac{1}{e ^ {\beta (\epsilon-\epsilon_f)}} = e ^ {\beta(\epsilon_f - \epsilon)} = e ^ {-\beta(\epsilon- \epsilon_f )}
+\end{gather*}
+Si se comporta como una distribución de Boltzmann $ \epsilon = \epsilon_F  $
+\begin{gather*}
+  F(\epsilon) = \frac{1}{2} 
+\end{gather*}
+El estudio de $ F(\epsilon) $ se centra para el caso cuando 
+\begin{gather*}
+  \beta\epsilon_F = \frac{\epsilon_f }{k T } \gg 1
+\end{gather*}
+Para este caso se tienen tres opciones 
+\begin{itemize}
+  \item $ \epsilon \gg \epsilon_f  $, por lo cual $ \beta(\epsilon - \epsilon_f ) \ll 0  $, lo cual conduce a que $  e ^ {\beta(\epsilon - \epsilon_f )}\approx 0  $ y entonces 
+    \begin{gather*}
+       F(\epsilon) = 1 
+    \end{gather*}
+  \item $ \epsilon \gg \epsilon_f  $ por lo cual $ \beta(\epsilon - \epsilon_f ) \gg 0  $, lo cual conduce a que $  e ^ {\beta(\epsilon - \epsilon_f )}\gg 0  $ y entonces 
+    \begin{gather*}
+      F(\epsilon ) = e ^ {-\beta(\epsilon- \epsilon_f )}
+    \end{gather*}
+  \item $ \epsilon = \epsilon_f  $ lo que significa que 
+    \begin{gather*}
+      F(\epsilon) = \frac{1}{2} 
+    \end{gather*}
+\end{itemize}
+La energía de Fermi $ \epsilon_f^0  $ a temperatura $ T = 0  $ se calcula de la siguiente manera: 
+La energía de cada partícula está relacionada con su momento por $ \vec p = h \vec k  $ 
+\begin{gather*}
+  \epsilon = \frac{p^2 }{2m } = \frac{\hbar^2 k ^2 }{2m }  
+\end{gather*}
+Cuando $ T = 0  $ todos los estados de mas baja energía se llenan hasta la energía de Fermi $ \epsilon_f^0  $ que corresponde a un momento de Fermi de magnitud $ p_f = \hbar k_F $ tal que 
+\begin{gather*}
+  \epsilon_f^2 = \frac{p_f^2 }{2m } = \frac{h^2 k_f^2 }{2m } 
+\end{gather*}
+A $ T = 0  $ todos los estados con $ k <k_f  $ están llenos y aquellos con $ k > k_f  $ estás vacíos. 
+
+Debido a que el número total de estados en la esfera debe ser igual al numero total de partículas acomodadas en estos estados (una partícula por estado), se sigue que 
+\begin{gather*}
+  2 \frac{V }{(2\pi)^3 }\left(\frac{4}{3}\pi k_f^3 \right) = N \\
+  k_f = (2 \pi^2 \frac{N}{V })^{1/3}\\
+  \lambda_f = \frac{2\pi }{(3\pi^2)^{1/3} }\left(\frac{V }{N }\right)^ {1/3 }
+\end{gather*}
+Todos los estados de partícula con $ \lambda = \frac{2\pi }{k } >\lambda_f  $ están ocupados a $ T = 0  $ y aquellos con $ \lambda< \lambda_f  $ están vacíos 
+
+La energía de Fermi a $ T = 0  $ es, luego 
+\begin{gather*}
+  \epsilon_f ^0 = \frac{h^2 }{8m } \left(\frac{3N }{\pi V }\right)^ {2/3 } 
+\end{gather*}
+\textbf{Ver ejercicio en las notas de classroom}
+
+\end{document}

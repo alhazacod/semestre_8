@@ -1,0 +1,262 @@
+
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Clase Mecánica Estadística }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{Ejercicios }
+\subsection{Ejemplo 1 }
+
+\textbf{a) } para un gas ideal de bosones, demuestre que la entropía $ S^B  $ se puede expresar como 
+\begin{gather*}
+  S^B = k_B \displaystyle\sum_{i }^{}\left[(n_i ^ {BE } + 1 ) \ln (1 + n_i^{BE }) - n_i ^ {BE } \ln n_i ^ {BE }\right] 
+\end{gather*}
+Donde $ n_i ^ {BE } $ es la distribución de Bose-Einstein, tenga en cuenta que la entropía de este sistema se puede expresar como $ S^B = k_B (\beta E+ \ln Z^B ) $ siendo $ Z ^B  $ la función de partición para el gas de bosones 
+
+\textbf{b) } Muestre que en el limite de altas temperatura la entropía $ S ^B  $ tiende a la entropía de Gibbs -Boltzmann y que la función de gran partición para el gas de bosones definida como 
+\begin{gather*}
+  \ln Z^B = - \beta\mu N + \displaystyle\sum_{i }^{} \ln Z_i ^ {BE } 
+\end{gather*}
+Siendo $ Z_i ^ {BE } $ la función de Bose-Einstein, tiende a la función de partición de Gibbs- Boltzmann 
+
+\textbf{Solución }
+
+\textbf{a) } Se tiene que 
+\begin{gather*}
+  \ln Z^B = - \beta\mu N + \displaystyle\sum_{i }^{} \ln Z_i ^ {BE } = - \beta\mu N - \displaystyle\sum_{i }^{} \ln (1 - e ^ {- \beta(\epsilon_i - \mu)})
+\end{gather*}
+Dado que 
+\begin{gather*}
+  n_i ^ {BE } = \frac{1}{e ^ {\beta(\epsilon_i - \mu)} - 1 } 
+\end{gather*}
+Entonces 
+\begin{gather*}
+  n_i ^ {BE } e ^ {\beta(\epsilon_i - \mu)} - n_i ^ {BE } - n_i ^ {BE } = 1 \\
+  n_i ^ {BE } e ^ {\beta(\epsilon_i - \mu)} - n_i ^ {BE } = 1 + n_i ^ {BE } \\
+  \ln (n_i ^ {BE } e ^ {\beta(\epsilon_i - \mu)} - n_i ^ {BE } ) = \ln (1 + n_i ^ {BE }) \\
+  \ln n_i ^ {BE }  + \ln (e ^ {\beta(\epsilon_i - \mu)} - n_i ^ {BE }) = \ln (1 + n_i ^ {BE }) \\
+  \beta(\epsilon_i - \mu) = \ln \frac{1 + n_i^{BE }}{n_i^{BE }} \\
+  \beta\epsilon_i = \beta \mu + \ln \frac{1 + n_i^{BE }}{n_i^{BE }}
+\end{gather*}
+Sustituyendo esto en la primera ecuación 
+\begin{gather*}
+  \ln Z^B = \beta\mu N - \displaystyle\sum_{i }^{} \ln \left(1 - \frac{n_i ^ {BE }}{1 + n_i ^ {BE }}\right) = - \beta\mu N + \displaystyle\sum_{i }^{} \ln (1 + n_i ^ {BE }) 
+\end{gather*}
+La energía interna promedio 
+\begin{gather*}
+  \bar \epsilon  = \displaystyle\sum_{i }^{} \epsilon_i n_i ^ {BE } \rightarrow \beta\bar\epsilon_i = \displaystyle\sum_{i }^{} (\beta\epsilon_i ) n_i ^ {BE }
+\end{gather*}
+Por lo tanto 
+\begin{gather*}
+  \beta\bar \epsilon = \displaystyle\sum_{i }^{} \left(\beta\mu + \ln \frac{1 + n_i to
+  BE }{n_i ^ {BE }}\right)n_i ^ {BE }\\
+  = \displaystyle\sum_{i }^{} \left[\beta\mu n_i ^ {BE } + n_i ^ {BE } \ln (1 + n_i ^ {BE }) - n_i ^ {BE }\ln n_i ^ {BE }\right]
+\end{gather*}
+Sustituyendo esto en la entropía $ S^B $ 
+\begin{gather*}
+  S^B = k_B \left(\displaystyle\sum_{i }^{} (\beta\mu n_i ^ {BE } + n_i ^ {BE } \ln ( 1 + n_i ^ {BE }) - n_i ^ {BE } \ln n_i ^ {BE }) - k_B (\displaystyle\sum_{i }^{} \beta\mu n_i ^ {BE } + \ln (1 + n_i ^ {BE }))\right) \\
+  = k_b \displaystyle\sum_{i }^{} ( n_i ^ {BE } + 1 ) \ln ( 1 + n_i ^ {BE }) - n_i ^ {BE } \ln n_i ^ {BE }
+\end{gather*}
+Si $ T \rightarrow \infty; \ \ \beta = \frac{1}{k_B T } \rightarrow 0 ; \ \ n_i ^ {BE } = \frac{1}{e ^ {\beta(\epsilon_i - \mu)} - 1 } $
+\begin{gather*}
+  n_i ^ {BE } = \frac{1}{e ^ {\beta(\epsilon_i - \mu) } - 1 } \ \ \rightarrow \ \ n_i ^ {BE } \approx \frac{1}{e ^ {\beta\epsilon_i }} \rightarrow 0 ; \qquad \beta\epsilon_i \gg 0 
+\end{gather*}
+Teniendo en cuenta que $ \mu<\epsilon_0  \ \rightarrow \ \epsilon_i \gg \mu $ 
+\begin{gather*}
+  \beta\epsilon_i = \frac{\epsilon_i }{k_B T }; \ \ \epsilon_i \gg k_B T  \qquad \quad e ^ {\beta(\epsilon_i - \mu)} \approx e ^ {\beta\epsilon_i } \gg 0
+\end{gather*}
+Luego 
+\begin{gather*}
+  \ln(1 + n_i ^ {BE }) \approx \ln(1 ) \rightarrow 0 \\
+  (n_i ^ {BE }) \ln (1 + n_i ^ {BE }) \approx 1 \ln 1 \rightarrow 0 
+\end{gather*}
+Así 
+\begin{gather*}
+  S^B = - k_B \displaystyle\sum_{i }^{} n_i ^ {BE }  \ln n_i ^ {BE }\\
+  S = - k_B \displaystyle\sum_{i }^{} D_i \ln P_i 
+\end{gather*}
+
+\hfill 
+
+\hfill
+
+\textbf{b) } 
+\begin{gather*}
+  \ln Z^B = - \beta\mu N + \displaystyle\sum_{i }^{} \ln Z_i ^ {BE } = - \beta\mu N - \displaystyle\sum_{i }^{} \ln ( 1 - e ^ {- \beta(\epsilon_i - \mu)}) 
+\end{gather*}
+Si $ T \rightarrow  \infty $, $ \beta \rightarrow 0  \ \rightarrow \ - \beta\mu N \rightarrow 0 $\\
+Así 
+\begin{gather*}
+  \ln Z^B = - \displaystyle\sum_{i }^{} \ln ( 1 - e ^ {- \beta(\epsilon_i - \mu)}) 
+\end{gather*}
+Dado que $ \epsilon_i \gg \epsilon_0 ; \ \ \mu<\epsilon_0  $\\
+Así $ \epsilon_i \gg \mu  $\\
+Luego $ e ^ {- \beta(\epsilon_i - \mu)} \approx e ^ {- \beta \epsilon_i } $ \\
+Así $ \ln (1 - e ^ {- \beta\epsilon_i }) \approx e ^ {- \beta\epsilon_i } $
+\begin{gather*}
+  \ln Z^B = - \displaystyle\sum_{i }^{} \ln (1 - e ^ {-\beta \epsilon_i }) = \displaystyle\sum_{i }^{} e ^ {- \beta\epsilon_i } = Q_1  
+\end{gather*}
+
+
+
+
+
+\subsection{Ejemplo 2 }
+La fluctuación relativa en el numero de partículas $ F  $ para el sistema descrito por el ensamble grancanónico se puede escribir como 
+\begin{gather*}
+  F = \frac{1}{N } \sqrt{\frac{1}{\beta} \frac{\partial \expval{N } }{\partial \mu }}  
+\end{gather*}
+\textbf{a) } Demuestre que $ F  $ en el numero de fermiones para un gas de N fermiones es 
+\begin{gather*}
+  F ^ {FD } = \sqrt{\frac{1 - n ^ {FD }}{n ^ {FD }}}  
+\end{gather*}
+\textbf{b) } Encuentre $ F ^ {FD } $ a $ T = 0  $
+
+\hfill 
+
+\textbf{a) } 
+\begin{gather*}
+  \expval{N } = N = n_i ^ {FD } = \frac{1}{e ^ {\beta( \epsilon_i - \mu )} + 1 } 
+\end{gather*}
+\begin{gather*}
+  F_i ^ {FD } = \frac{1}{N } \sqrt{\frac{1}{\beta} \frac{\partial \expval{N_i } }{\partial \mu}}  
+\end{gather*}
+Así 
+\begin{gather*}
+  \frac{\partial \expval{N_i } }{\partial \mu} = \frac{(- 1) (-\beta) e ^ {\beta(\epsilon_i - \mu)}}{(e ^ {\beta(\epsilon_i - \mu)} + 1 )^2 }\\
+  = \beta \left(\frac{1}{e ^ {\beta(\epsilon_i - \mu + 1 )} + 1 } - \frac{1}{(e ^ {\beta(\epsilon_i - \mu) } + 1 )^2}\right) \\
+  = \beta(n_i ^ {FD } - (n_i ^ {FD})^2) \\
+  = \beta n_i ^ {FD } (1 - n_i ^ {FD })
+\end{gather*}
+Sustituyendo esto en $ F_i ^ {FD } $
+\begin{gather*}
+  F_i ^ {FD } = \frac{\sqrt{\frac{1}{\beta} \beta n_i ^ {FD }( 1 - n_i ^ {FD })} }{\sqrt{(n_i ^ {FD})^2} } \\
+  F_i ^ {FD } = \sqrt{\frac{1 - n_i ^ {FD }}{n_i ^ {FD }}} 
+\end{gather*}
+
+\hfill 
+
+\hfill
+
+\textbf{b) } Si $ T \rightarrow 0 = n ^ {FD } = 1  $
+\begin{gather*}
+  \rightarrow F_i ^ {FD } = \sqrt{\frac{1 - 1 }{1}} = 0  
+\end{gather*}
+
+
+
+
+
+
+\subsection{Ejemplo 3 }
+Para un gas ideal de $ N  $ partículas simples sin espín contenido en un recipiente de volumen $ V  $ a temperatura $ T  $ se satisface las siguientes ecuaciones de estado 
+\begin{gather*}
+  E = \frac{3 }{2 } N k_B T \\
+  PV = \frac{2}{3} E 
+\end{gather*}
+Ahora considere que las partículas del gas ideal puede ser función de spin $ S = \frac{1}{2} $ o bosones de espín $ S = 1  $; de tal forma que los fermiones tienen la misma masa $ m  $ que los bosones, cumpliéndose que cuando el gas ideal es de fermiones, la energía interna y presión son respectivamente 
+\begin{gather*}
+  E_B \quad \text{ y } \quad p_F  
+\end{gather*}
+encontrar que si el gas ideas es de bosones, la energía y la presión son 
+\begin{gather*}
+  E_B \quad \text{ y }\quad P_B 
+\end{gather*}
+Haciendo uso de la expresión semiclásica, en la que 
+\begin{gather*}
+  \lambda = \frac{h }{(2 \pi m k_B T )^ {1/2 }} 
+\end{gather*}
+Para dos gases ideales, el primero de $ N  $ fermiones y el segundo de $ N  $ bosones, contenido en un recipiente de volumen $ V  $ y a la misma temperatura $ T  $, define la diferencia de energía interna 
+\begin{gather*}
+  \Delta E = E_F - E_B  
+\end{gather*}
+ y la diferencia de presión 
+ \begin{gather*}
+  \Delta P = P_F - P_B  
+ \end{gather*}
+ Entre los dos gases.
+
+ En la aproximación analítica tiene que la energía interna en un gas de partícula en espín $ S  $ es 
+ \begin{gather*}
+  E = \frac{3 }{2} Nk_B T \left[1 + \frac{1 }{2 ^ {5/2 }} \frac{N \lambda^3 }{(2S + 1 )V }\right] 
+ \end{gather*}
+ Siendo $ (+ ) $ para fermiones $ (S = \frac{1}{2}) $, $ (- )  $ para bosones $ (S = 1 ) $ para este gas ideal se cumple que 
+ \begin{gather*}
+  PV = \frac{2 }{3 } E  
+ \end{gather*}
+ Para gas de fermiones 
+ \begin{gather*}
+  E_F = \frac{3 }{2 } Nk_B T \left[ 1 + \frac{1}{2 ^ {3/2 }} \frac{1}{(2 \cdot \frac{1}{2} + 1 )}(N/V ) \lambda^3 \right] \\
+  E_B = \frac{3 }{2 } Nk_B T \left[ 1 + \frac{1}{2 ^ {3/2 }} \frac{1}{(2 \cdot 1 + 1 )}(N/V ) \lambda^3 \right] 
+ \end{gather*}
+ Así 
+ \begin{gather*}
+  \Delta E = E_F - E_B = \frac{3 }{2 } k_B T \left[\frac{1}{\sqrt{32 } } \frac{1}{2} (N/V)\lambda^3 + \frac{1}{32 }\frac{1}{3} (N/V)\lambda^3 \right] = \frac{3 }{2 } Nk_B T \frac{5}{33.94 } (N/V ) \lambda^3 \\
+  \Delta E = 0.044 N k_B T (N/V) \lambda^3 
+ \end{gather*}
+
+ \hfill 
+
+ \hfill 
+
+ \begin{gather*}
+  \Delta P = P_F  - P_B = \frac{1}{V } \left(\frac{2}{3} E_F - \frac{2}{3 } E_B \right) = \frac{1}{V } \frac{2}{3} \Delta E \\
+  \Delta P = 0.029 k_B T (N/V)^2 \lambda^3 
+ \end{gather*}
+
+ \hfill 
+
+ \hfill 
+
+ \textbf{b) } Si $ N/2  $ sea fermiones y $ N/2  $ sea bosones, determine $ E  $ y $ P  $ 
+ \begin{gather*}
+  E ^ {\text{gas y espin }} = E_P + E_B = \frac{3}{2} (N/2) k_B T \left[1 + \frac{1}{\sqrt{32 } }\frac{1}{2} \frac{1}{2} (N/V) \lambda^3 \right] + \frac{3}{2} (N/2) k_B T \left[1 + \frac{1}{\sqrt{32 } }\frac{1}{3} \frac{1}{2} (N/V) \lambda^3 \right]
+\end{gather*}
+La diferencia con respecto al gas ideal de particulas sin espin 
+\begin{gather*}
+  \Delta E = E ^ {espin } - E ^ {sin\ espin } = 0.011 N k_B T (N/V) \lambda^3  \\
+  \Delta P = P ^ {espin } - P ^ {sin\ espin } = \frac{1}{V } \left(\frac{2}{3 } E ^ {espin } - \frac{2}{3} E ^ {sin\ espin }\right) = \frac{1}{V} \frac{2}{3} \Delta E  \\
+  \Delta P = 0.007 k_B T (N/V)^2 \lambda^3 
+\end{gather*}
+
+\hfill 
+
+\hfill 
+
+\begin{gather*}
+  T \lambda^3  = T \frac{1}{(T ^ {1/2 })^3 } = T ^ {-1/2}\\
+  \Delta E \approx \frac{1}{\sqrt{T } } \qquad \qquad \Delta P \approx \frac{1}{\sqrt{T} }
+\end{gather*}
+
+\end{document}

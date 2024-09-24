@@ -1,0 +1,88 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-3dplot}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry} % Controla los márgenes
+\usepackage{titling}
+
+\title{Distribución de Bose-Einstein }
+\author{Manuel Garcia.}
+\date{\today}
+
+\renewcommand{\maketitlehooka}{%
+  \centering
+  \vspace*{0.05cm} % Espacio vertical antes del título
+}
+
+\renewcommand{\maketitlehookd}{%
+  \vspace*{2cm} % Espacio vertical después de la fecha
+}
+
+\newcommand{\caja}[3]{%
+  \begin{tcolorbox}[colback=#1!5!white,colframe=#1!25!black,title=#2]
+    #3
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\maketitle
+
+\section{}
+Vamos a tener una cavidad conductora cubica de arista $ l  $ con una placa conductora en $ L  $.
+
+\hfill 
+
+% Set up the 3D coordinate frame
+\tdplotsetmaincoords{70}{110}  % Angle of 3D view
+
+\begin{tikzpicture}[tdplot_main_coords]
+
+    % Dimensions of the cubic cavity
+    \def\L{5}  % Length of the cube side
+    \def\Lp{2} % Position of the conductive plane (L' < L)
+
+    % Draw the cubic cavity
+    \draw[thick] (0,0,0) -- (\L,0,0) -- (\L,\L,0) -- (0,\L,0) -- cycle; % Bottom face
+    \draw[thick] (0,0,\L) -- (\L,0,\L) -- (\L,\L,\L) -- (0,\L,\L) -- cycle; % Top face
+    \draw[thick] (0,0,0) -- (0,0,\L); % Vertical edges
+    \draw[thick] (\L,0,0) -- (\L,0,\L);
+    \draw[thick] (\L,\L,0) -- (\L,\L,\L);
+    \draw[thick] (0,\L,0) -- (0,\L,\L);
+
+    % Draw the conductive plane (at L' on the y-axis, i.e., xz-plane)
+    \draw[fill=gray,opacity=0.5] (0,\Lp,0) -- (\L,\Lp,0) -- (\L,\Lp,\L) -- (0,\Lp,\L) -- cycle;
+
+    % Add labels for dimensions and the conductive plane
+    \node at (\L/2,-0.5,0) {Length $l$};
+    \node at (-0.5,\L/2,\L/2) {Height $l$};
+    \node at (\L+0.5,\Lp,\L/2) {Conductive plane at $y = L$};
+
+\end{tikzpicture}
+
+\hfill
+
+Con condición de frontera de que el campo en las placas debe ser nulo 
+\begin{gather*}
+  E_{||}(0,t) = E_{||}(l,t) = E_{||} (l - L,t) = 0  
+\end{gather*}
+\begin{gather*}
+  E(l,t) = E_{0x} \sin(\omega_x t + \phi_x) \sin (k_x l ) = 0  \\
+  E(l,t) = E_{0x} \sin(\omega_x t + \phi_x) \sin (k_x l ) = 0  \\
+  E(l,t) = E_{0x} \sin(\omega_x t + \phi_x) \sin (k_x l ) = 0  
+\end{gather*}
+Se encuentra que 
+\begin{gather*}
+  k_x = k_y = \frac{n\pi }{l } \qquad \qquad k_z = \frac{n \pi }{L } 
+\end{gather*}
+Para la región II 
+
+\end{document}
+
